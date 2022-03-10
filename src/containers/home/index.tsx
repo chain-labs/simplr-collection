@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 
 const HomePage = () => {
 	return (
-		<Box mb="wxl">
+		<Box width="100vw" mb="wxs">
 			<Hero />
 		</Box>
 	);

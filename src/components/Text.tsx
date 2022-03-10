@@ -2,15 +2,15 @@ import React from 'react';
 import Box, { BoxProps } from 'components/Box';
 
 export const fontSizes = {
-	headline: { mobS: '4.0rem', tabL: '5.6rem' },
-	h1: { mobS: '3.2rem', tabL: '4rem' },
-	h2: { mobS: '2.8rem', tabL: '3.2rem' },
-	h3: { mobS: '1.8rem', tabL: '2.4rem' },
-	h4: { mobS: '1.2rem', tabL: '1.8rem' },
+	headline: { mobS: '4.0rem', tabS: '5.6rem' },
+	h1: { mobS: '3.2rem', tabS: '4rem' },
+	h2: { mobS: '2.8rem', tabS: '3.2rem' },
+	h3: { mobS: '1.8rem', tabS: '2.4rem' },
+	h4: { mobS: '1.2rem', tabS: '1.8rem' },
 	h5: '1.6rem',
 	h6: '1.4rem',
 	b3: '1.8rem',
-	b2: { mobS: '1.2rem', tabL: '1.6rem' },
+	b2: { mobS: '1.2rem', tabS: '1.6rem' },
 	b1: '1.4rem',
 	c1: '1rem',
 	c2: '1rem',
@@ -44,7 +44,7 @@ const fontW = {
 const charSpacing = {
 	headline: '-0.5px',
 	h1: '-0.4px',
-	h2: { mobS: '-0.1px', tabL: '-0.4px' },
+	h2: { mobS: '-0.1px', tabS: '-0.4px' },
 	h3: '-0.1px',
 	h4: '0.1px',
 	h5: '0px',

@@ -14,8 +14,12 @@ const Hero = () => {
 		gsap.fromTo('.hero-image', { autoAlpha: 0 }, { autoAlpha: 1, delay: 1.2, duration: 0.9 });
 	}, []);
 	return (
-		<Box>
-			<Box width={{ mobS: '100vw', tabS: '117rem' }} mx="auto" pt={{ mobS: 'wxl', tabS: '17rem', deskM: '19rem' }}>
+		<Box display="flex" justifyContent="center" width="100vw">
+			<Box
+				maxWidth={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }}
+				mx="auto"
+				pt={{ mobS: 'wxl', tabS: '17rem', deskM: '19rem' }}
+			>
 				<Box column center>
 					<Text
 						as="headline"
@@ -91,6 +95,35 @@ const Hero = () => {
 							desk="/static/images/desktop/hero_image.png"
 						/>
 					</Box>
+				</Box>
+				<Box
+					display="flex"
+					flexDirection={{ mobS: 'column-reverse', tabS: 'row' }}
+					justifyContent="space-between"
+					py={{ mobS: '0', tabS: 'ws' }}
+					px={{ mobS: '0', tabS: 'mxxxl' }}
+					alignItems="center"
+				>
+					<Box
+						mr={{ mobS: '0', tabS: 'mxxl' }}
+						maxWidth={{ mobS: '85vw', tabS: '44rem', deskM: '57rem' }}
+						mt={{ mobS: 'ms', tabS: '0' }}
+					>
+						<Text as="b2">
+							While we love the world of NFTs, we know there is a lot about it that could do with a few tweaks. At
+							Simplr, we believe that the ultimate form of sophistication is simplicity.
+						</Text>
+						<Text as="b2" mt="ml">
+							That&apos;s why we&apos;ve launched a simple to use, no-code platform to create NFT smart contracts so
+							that you can launch your NFTs without the hassle. Let us handle the blockchain and NFT complexities so
+							that you can focus your energies on growing your collection and brand.
+						</Text>
+					</Box>
+					<ResponsiveImage
+						mobile="/static/images/mobile/about.png"
+						tab="/static/images/tab/about.png"
+						desk="/static/images/desktop/about.png"
+					/>
 				</Box>
 			</Box>
 		</Box>
