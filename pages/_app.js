@@ -6,6 +6,7 @@ import theme from 'styleguide/theme';
 
 import 'styleguide/globalStyles.css';
 import { ThemeProvider } from 'styled-components';
+import Navbar from 'src/components/Navbar';
 
 const MyApp = ({ Component, pageProps }) => {
 	useEffect(() => {
@@ -40,6 +41,7 @@ const MyApp = ({ Component, pageProps }) => {
 				<link rel="shortcut icon" href="/favicon.png" />
 			</Head>
 			<ThemeProvider theme={theme}>
+				<Navbar />
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</>
