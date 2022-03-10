@@ -48,7 +48,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/src/style"
-  ],
+, "pages/_app.js"  ],
   "exclude": [
     "node_modules",
     ".next",
