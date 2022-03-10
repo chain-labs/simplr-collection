@@ -60,7 +60,7 @@ const Navbar = () => {
 				alignItems="center"
 				justifyContent="space-between"
 			>
-				<Box id="drawer" position="fixed" left="0" top="0" width="100vw" height="100vh">
+				<Box id="drawer" position="fixed" left="0" top="0" width="100vw" height="100vh" display="none">
 					<Box
 						position="fixed"
 						left="0"

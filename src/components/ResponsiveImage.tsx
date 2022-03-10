@@ -5,13 +5,12 @@ interface Props {
 	mobile?: string;
 	tab?: string;
 	desk?: string;
-	height?: string;
-	width?: string;
+	className?: string;
 }
 
-const ResponsiveImage = ({ mobile, tab, desk }: Props) => {
+const ResponsiveImage = ({ mobile, tab, desk, className }: Props) => {
 	return (
-		<Box>
+		<Box className={className}>
 			<If condition={!!desk} then={<Box as="img" src={desk} display={{ mobS: 'none', deskM: 'block' }} />} />
 			<If
 				condition={!!mobile}
