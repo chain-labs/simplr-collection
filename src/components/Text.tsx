@@ -9,7 +9,7 @@ export const fontSizes = {
 	h4: { mobS: '1.2rem', tabS: '1.8rem' },
 	h5: '1.6rem',
 	h6: '1.4rem',
-	b3: '1.8rem',
+	b3: { mobS: '1.2rem', tabS: '1.8rem' },
 	b2: { mobS: '1.2rem', tabS: '1.6rem' },
 	b1: '1.4rem',
 	c1: '1rem',

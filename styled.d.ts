@@ -99,6 +99,7 @@ declare module 'styled-components' {
 			'white-20': string;
 
 			'gray-00': string;
+			'gray-10': string;
 
 			'purple-10': string;
 			'purple-50': string;
