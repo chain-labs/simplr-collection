@@ -4,6 +4,9 @@ import ButtonComp from 'src/components/Button';
 import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
 	useEffect(() => {
@@ -12,6 +15,34 @@ const Hero = () => {
 		gsap.fromTo('.hero-cta-l', { autoAlpha: 0, x: '-5%' }, { autoAlpha: 1, x: '0%', delay: 0.6, duration: 0.3 });
 		gsap.fromTo('.hero-cta-r', { autoAlpha: 0, x: '5%' }, { autoAlpha: 1, x: '0%', delay: 0.6, duration: 0.3 });
 		gsap.fromTo('.hero-image', { autoAlpha: 0 }, { autoAlpha: 1, delay: 1.2, duration: 0.9 });
+
+		gsap.fromTo(
+			'.info-image',
+			{ autoAlpha: 0 },
+			{
+				autoAlpha: 1,
+				duration: 1.5,
+				scrollTrigger: {
+					trigger: '.info-image',
+					start: 'top 60%',
+					end: '200% 100%',
+				},
+			}
+		);
+		gsap.fromTo(
+			'.info-text',
+			{ autoAlpha: 0, x: '-5%' },
+			{
+				autoAlpha: 1,
+				x: '0%',
+				duration: 0.9,
+				scrollTrigger: {
+					trigger: '.info-image',
+					start: 'top 50%',
+					end: '200% 100%',
+				},
+			}
+		);
 	}, []);
 	return (
 		<Box display="flex" justifyContent="center" width="100vw">
@@ -102,11 +133,12 @@ const Hero = () => {
 					justifyContent="space-between"
 					py={{ mobS: '0', tabS: 'ws' }}
 					px={{ mobS: '0', tabS: 'mxxxl' }}
-					alignItems="center"
+					alignItems={{ mobS: 'center', tabS: 'flex-start', deskM: 'center' }}
 				>
 					<Box
+						className="info-text"
 						mr={{ mobS: '0', tabS: 'mxxl' }}
-						maxWidth={{ mobS: '85vw', tabS: '44rem', deskM: '57rem' }}
+						maxWidth={{ mobS: '85vw', tabS: '50%', deskM: '57rem' }}
 						mt={{ mobS: 'ms', tabS: '0' }}
 					>
 						<Text as="b2">
@@ -120,6 +152,7 @@ const Hero = () => {
 						</Text>
 					</Box>
 					<ResponsiveImage
+						className="info-image"
 						mobile="/static/images/mobile/about.png"
 						tab="/static/images/tab/about.png"
 						desk="/static/images/desktop/about.png"
