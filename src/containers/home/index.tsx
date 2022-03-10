@@ -3,7 +3,7 @@ import Text from 'src/components/Text';
 
 const HomePage = () => {
 	return (
-		<Box>
+		<Box height="110vh">
 			<Text as="h1">HOME</Text>
 		</Box>
 	);
