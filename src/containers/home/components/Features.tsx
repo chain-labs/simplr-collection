@@ -106,7 +106,6 @@ const Features = () => {
 				scrollTrigger: {
 					trigger: '.feat-title',
 					start: 'top 50%',
-					markers: true,
 				},
 			}
 		);
@@ -121,7 +120,6 @@ const Features = () => {
 				scrollTrigger: {
 					trigger: '.feat-title',
 					start: 'top 50%',
-					markers: true,
 				},
 			}
 		);
@@ -136,7 +134,6 @@ const Features = () => {
 				scrollTrigger: {
 					trigger: '.feat-title',
 					start: 'top 50%',
-					markers: true,
 				},
 			}
 		);
