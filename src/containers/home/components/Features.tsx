@@ -56,7 +56,6 @@ const FeatureCard = ({ image, title, info, className }) => {
 				scrollTrigger: {
 					trigger: '.feat-title',
 					start: `top 20%`,
-					markers: true,
 				},
 			}
 		);
