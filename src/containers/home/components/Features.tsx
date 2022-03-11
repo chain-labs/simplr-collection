@@ -1,6 +1,14 @@
+import { useEffect, useState } from 'react';
 import Box from 'src/components/Box';
 import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { randomIntFromInterval } from './utils';
+import { random } from './utils';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FEATURES = [
 	{
@@ -35,9 +43,27 @@ const FEATURES = [
 	},
 ];
 
-const FeatureCard = ({ image, title, info }) => {
+const FeatureCard = ({ image, title, info, className }) => {
+	useEffect(() => {
+		const key = parseInt(className[className.length - 1]);
+		gsap.fromTo(
+			`.${className}`,
+			{ autoAlpha: 0 },
+			{
+				autoAlpha: 1,
+				duration: 1,
+				delay: 0.3 * random[key],
+				scrollTrigger: {
+					trigger: '.feat-title',
+					start: `top 20%`,
+					markers: true,
+				},
+			}
+		);
+	}, []);
 	return (
 		<Box
+			className={className}
 			display="flex"
 			flexDirection={{ mobS: 'column', tabS: 'row' }}
 			alignItems="center"
@@ -70,26 +96,95 @@ const FeatureCard = ({ image, title, info }) => {
 };
 
 const Features = () => {
+	useEffect(() => {
+		gsap.fromTo(
+			'.feat-title',
+			{ y: '-10%', autoAlpha: '0' },
+			{
+				y: '0%',
+				autoAlpha: '1',
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.feat-title',
+					start: 'top 50%',
+					markers: true,
+				},
+			}
+		);
+		gsap.fromTo(
+			'.feat-info',
+			{ y: '-10%', autoAlpha: '0' },
+			{
+				y: '0%',
+				autoAlpha: '1',
+				duration: 1,
+				delay: 0.5,
+				scrollTrigger: {
+					trigger: '.feat-title',
+					start: 'top 50%',
+					markers: true,
+				},
+			}
+		);
+		gsap.fromTo(
+			'.feat-info',
+			{ y: '-10%', autoAlpha: '0' },
+			{
+				y: '0%',
+				autoAlpha: '1',
+				duration: 1,
+				delay: 0.5,
+				scrollTrigger: {
+					trigger: '.feat-title',
+					start: 'top 50%',
+					markers: true,
+				},
+			}
+		);
+	}, []);
+
 	return (
 		<Box
 			id="features"
 			mt="mxxxl"
+			pb="60vw"
 			pt="wxs"
 			width={{ mobS: '90vw', tabS: '55rem', deskM: '110rem' }}
 			mx="auto"
 			column
 			center
 		>
-			<Text as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }}>
+			<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }}>
 				Game Changing Features
 			</Text>
-			<Text as="h2" fontSize="2.4rem" color="simply-blue" display={{ mobS: 'block', deskM: 'none' }} textAlign="center">
+			<Text
+				className="feat-title"
+				as="h2"
+				fontSize="2.4rem"
+				color="simply-blue"
+				display={{ mobS: 'block', deskM: 'none' }}
+				textAlign="center"
+			>
 				Our Game Changing Features
 			</Text>
-			<Text as="b3" textAlign="center" maxWidth="50rem" mt="ms" display={{ mobS: 'none', tabS: 'block' }}>
+			<Text
+				className="feat-info"
+				as="b3"
+				textAlign="center"
+				maxWidth="50rem"
+				mt="ms"
+				display={{ mobS: 'none', tabS: 'block' }}
+			>
 				For your smart contract, you can select from a variety of modules. It’s as easy as plugging and playing.
 			</Text>
-			<Text as="h4" textAlign="center" maxWidth="75vw" mt="ms" display={{ mobS: 'block', tabS: 'none' }}>
+			<Text
+				className="feat-info"
+				as="h4"
+				textAlign="center"
+				maxWidth="75vw"
+				mt="ms"
+				display={{ mobS: 'block', tabS: 'none' }}
+			>
 				For your smart contract, you can select from a variety of modules. It’s as easy as plugging and playing.
 			</Text>
 			<Box
@@ -102,7 +197,7 @@ const Features = () => {
 				alignItems="center"
 			>
 				{FEATURES.map(({ image, title, info }, idx) => (
-					<FeatureCard key={`${idx}-feature`} {...{ image, title, info }} />
+					<FeatureCard key={`${idx}-feature`} className={`feat-card-${idx}`} {...{ image, title, info }} />
 				))}
 			</Box>
 		</Box>
