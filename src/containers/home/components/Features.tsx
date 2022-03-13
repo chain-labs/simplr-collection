@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { randomIntFromInterval } from './utils';
 import { random } from './utils';
+import theme from 'src/styleguide/theme';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,20 +46,39 @@ const FEATURES = [
 
 const FeatureCard = ({ image, title, info, className }) => {
 	useEffect(() => {
+		const width = window.visualViewport.width;
+		const breakpoint = parseInt(theme.breakpoints.deskM.split('px')[0]);
+		console.log({ width, breakpoint });
+
 		const key = parseInt(className[className.length - 1]);
-		gsap.fromTo(
-			`.${className}`,
-			{ autoAlpha: 0 },
-			{
-				autoAlpha: 1,
-				duration: 1,
-				delay: 0.3 * random[key],
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: `top 20%`,
-				},
-			}
-		);
+		if (width >= breakpoint) {
+			gsap.fromTo(
+				`.${className}`,
+				{ autoAlpha: 0 },
+				{
+					autoAlpha: 1,
+					duration: 1,
+					delay: 0.3 * random[key],
+					scrollTrigger: {
+						trigger: '.feat-title',
+						start: `top 20%`,
+					},
+				}
+			);
+		} else {
+			gsap.fromTo(
+				`.${className}`,
+				{ autoAlpha: 0 },
+				{
+					autoAlpha: 1,
+					duration: 1,
+					scrollTrigger: {
+						trigger: '.feat-title',
+						start: `top 20%`,
+					},
+				}
+			);
+		}
 	}, []);
 	return (
 		<Box
