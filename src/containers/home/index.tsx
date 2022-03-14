@@ -1,7 +1,9 @@
 import Box from 'src/components/Box';
+import Contacts from './components/Contacts';
 import Features from './components/Features';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
+import System from './components/System';
 
 const HomePage = () => {
 	return (
@@ -9,6 +11,8 @@ const HomePage = () => {
 			<Hero />
 			<Features />
 			<HowItWorks />
+			<System />
+			<Contacts />
 		</Box>
 	);
 };
