@@ -45,7 +45,11 @@ const Hero = () => {
 		);
 	}, []);
 	return (
-		<Box display="flex" justifyContent="center" width="100vw">
+		<Box
+			display="flex"
+			justifyContent="center"
+			//  width="100vw"
+		>
 			<Box
 				maxWidth={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }}
 				mx="auto"

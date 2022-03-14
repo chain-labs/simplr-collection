@@ -49,7 +49,7 @@ const charSpacing = {
 	h4: '0.1px',
 	h5: '0px',
 	h6: '0px',
-	b3: '0.1px',
+	b3: '-0.1px',
 	b2: '-0.1px',
 	b1: '-0.1px',
 	c1: '0.4px',
