@@ -48,8 +48,6 @@ const FeatureCard = ({ image, title, info, className }) => {
 	useEffect(() => {
 		const width = window.visualViewport.width;
 		const breakpoint = parseInt(theme.breakpoints.deskM.split('px')[0]);
-		console.log({ width, breakpoint });
-
 		const key = parseInt(className[className.length - 1]);
 		if (width >= breakpoint) {
 			gsap.fromTo(
@@ -160,17 +158,8 @@ const Features = () => {
 	}, []);
 
 	return (
-		<Box
-			id="features"
-			mt="mxxxl"
-			pb="60vw"
-			pt="wxs"
-			width={{ mobS: '90vw', tabS: '55rem', deskM: '110rem' }}
-			mx="auto"
-			column
-			center
-		>
-			<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }}>
+		<Box mt="mxxxl" pt="wxs" width={{ mobS: '90vw', tabS: '55rem', deskM: '110rem' }} mx="auto" column center>
+			<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }} id="features">
 				Game Changing Features
 			</Text>
 			<Text
