@@ -6,22 +6,31 @@ import ButtonComp from './Button';
 import ResponsiveImage from './ResponsiveImage';
 import Text from './Text';
 import { gsap } from 'gsap';
-import { ArrowRight, DiscordLogo, InstagramLogo, TwitterLogo, X } from 'phosphor-react';
+import { ArrowRight, X } from 'phosphor-react';
+import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import ResponsiveText from './ResponsiveText';
 
-const NavLink = ({ href, text, as, closeDrawer }) => {
+const NavLink = ({ href, text, closeDrawer }) => {
 	return (
-		<Link href={href} as={as}>
-			<Box borderBottom={`1px solid ${theme.colors['blue-10']}`} py="ms" pl="mxxxl" onClick={() => closeDrawer()}>
-				<Box between width="80%">
-					<Text as="h6" color="simply-blue">
-						{text}
-					</Text>
-					<ArrowRight size="20" color={theme.colors['simply-blue']} />
-				</Box>
+		<Box
+			borderBottom={`1px solid ${theme.colors['blue-10']}`}
+			py="ms"
+			pl="mxxxl"
+			onClick={() => {
+				console.log({ href });
+
+				scrollIntoView(href);
+				closeDrawer();
+			}}
+		>
+			<Box between width="80%">
+				<Text as="h6" color="simply-blue">
+					{text}
+				</Text>
+				<ArrowRight size="20" color={theme.colors['simply-blue']} />
 			</Box>
-		</Link>
+		</Box>
 	);
 };
 
@@ -82,27 +91,27 @@ const Navbar = () => {
 								</Box>
 							</Box>
 							<Box borderTop={`1px solid ${theme.colors['blue-10']}`}>
-								<NavLink href="#features" as="/" text="Features" closeDrawer={closeDrawer} />
-								<NavLink href="#how" as="/" text="How it Works" closeDrawer={closeDrawer} />
-								<NavLink href="#roadmap" as="/" text="Roadmap" closeDrawer={closeDrawer} />
+								<NavLink href="features" text="Features" closeDrawer={closeDrawer} />
+								<NavLink href="how" text="How it Works" closeDrawer={closeDrawer} />
+								<NavLink href="roadmap" text="Roadmap" closeDrawer={closeDrawer} />
 							</Box>
 						</Box>
 						<Box>
 							<Box pl="mxxxl" pb="mxl" borderBottom={`1px solid ${theme.colors['blue-10']}`}>
 								<Box row alignItems="center">
-									<InstagramLogo size="20" color={theme.colors['simply-blue']} />
+									<InstagramFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Instagram
 									</Text>
 								</Box>
 								<Box row alignItems="center" mt="ms">
-									<DiscordLogo weight="fill" size="20" color={theme.colors['simply-blue']} />
+									<DiscordFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Join our Discord
 									</Text>
 								</Box>
 								<Box row alignItems="center" mt="ms">
-									<TwitterLogo weight="fill" size="20" color={theme.colors['simply-blue']} />
+									<TwitterFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Twitter
 									</Text>
