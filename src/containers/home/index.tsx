@@ -1,10 +1,12 @@
 import Box from 'src/components/Box';
-import Text from 'src/components/Text';
+import Features from './components/Features';
+import Hero from './components/Hero';
 
 const HomePage = () => {
 	return (
-		<Box height="110vh">
-			<Text as="h1">HOME</Text>
+		<Box width="100vw" height="300vh" mb="wxs">
+			<Hero />
+			<Features />
 		</Box>
 	);
 };
