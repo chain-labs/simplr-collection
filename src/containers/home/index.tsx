@@ -3,6 +3,7 @@ import Features from './components/Features';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import CollectionTypes from './components/CollectionTypes';
+import Roadmap from './components/Roadmap';
 
 const HomePage = () => {
 	return (
