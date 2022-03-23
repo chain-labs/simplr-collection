@@ -9,72 +9,53 @@ interface props {
 	status?: string;
 	text: string;
 	headText: string;
-	position?: string;
+	positionMob?: string;
+	positionDesk?: string;
 	arrowTop: string;
 }
 
-const RoadmapComp = ({ status, odd, text, headText, position, arrowTop }: props) => {
+const RoadmapComp = ({ status, odd, text, headText, positionMob, positionDesk, arrowTop }: props) => {
 	return (
-		<Box center column>
-			<Box
-				width="5px"
-				height="80px"
-				borderTopLeftRadius={position === 'first' ? '36px' : ''}
-				borderTopRightRadius={position === 'first' ? '36px' : ''}
-				borderBottomLeftRadius={position === 'last' ? '36px' : ''}
-				borderBottomRightRadius={position === 'last' ? '36px' : ''}
-				backgroundColor={
-					status === 'done'
-						? 'simply-blue'
-						: status === 'progress'
-						? 'linear-gradient(180deg, #4743C5 10.54%, rgba(71, 67, 197, 0) 28.65%)'
-						: '#E0EAFF'
-				}
-			></Box>
-			<Box between row>
+		<Box mt="80px">
+			<Box width="290%" display="flex" alignItems="center" justifyContent="space-between">
 				<If
-					condition={odd}
+					condition={!odd}
 					then={
-						<Text ml="-50%" as="h4">
+						<Text as="h4" ml={positionMob}>
 							{headText}
 						</Text>
 					}
 				/>
-				<Box between row position="relative">
-					<Box
-						minWidth="32.6px"
-						minHeight="32.6px"
-						borderRadius="100%"
-						backgroundColor="simply-blue"
-						center
-						ml={odd ? '-114%' : ''}
-					>
-						<If
-							condition={status === 'progress' || status === 'done'}
-							then={
-								<Box width="17px" height="17px" borderRadius="100%" backgroundColor="white">
-									<If condition={status === 'done'} then={<Check size={17} />} />
-								</Box>
-							}
-						/>
-					</Box>
-					<Box
-						className={odd ? 'pointedRightBox' : 'pointedLeftBox'}
-						py="20px"
-						px="15px"
-						css={`
-							:before {
-								top: ${arrowTop};
-							}
-						`}
-					>
-						<Text as="b3">{text}</Text>
-					</Box>
+				<Box className={odd ? 'pointedLeftBox' : 'pointedRightBox'} py="20px" px="15px">
+					<Text as="b3">{text}</Text>
+				</Box>
+				<Box
+					minWidth={status === 'not done' ? '17px' : '36.6px'}
+					minHeight={status === 'not done' ? '17px' : '36.6px'}
+					borderRadius="100%"
+					backgroundColor="simply-blue"
+					center
+					ml={odd ? (status === 'not done' ? { mobS: '14%', tabS: '14.5%' } : { mobS: '10%', tabS: '11.5%' }) : '0'}
+					mr={odd ? '0' : status === 'not done' ? { mobS: '79.5%', tabS: '80%' } : { mobS: '75.5%', tabS: '77%' }}
+					css={`
+						:before {
+							top: ${arrowTop};
+						}
+					`}
+				>
+					<If
+						condition={status === 'progress' || status === 'done'}
+						then={
+							<Box width="17px" height="17px" borderRadius="100%" backgroundColor="white">
+								<If condition={status === 'done'} then={<Check size={17} />} />
+							</Box>
+						}
+					/>
 				</Box>
 				<If
-					condition={!odd}
+					condition={odd}
 					then={
-						<Text position="absolute" as="h4" ml="4.5%">
+						<Text as="h4" mr={{ mobS: '50%', tabS: '50%' }} textAlign="start">
 							{headText}
 						</Text>
 					}
