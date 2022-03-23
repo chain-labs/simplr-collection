@@ -10,8 +10,7 @@ interface props {
 	status?: string;
 	text: string;
 	headText: string;
-	positionMob?: string;
-	positionDesk?: string;
+	position?: string;
 	arrowTop: string;
 	top: object;
 }
