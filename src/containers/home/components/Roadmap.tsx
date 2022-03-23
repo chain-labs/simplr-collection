@@ -32,8 +32,7 @@ const Roadmap = () => {
 						status="done"
 						text="Launch Simplr Collection on Polygon and Ethereum"
 						headText="2022, Q1"
-						positionMob="-27%"
-						positionDesk="-27%"
+						position="-27%"
 						arrowTop="35%"
 					/>
 					<RoadmapComp status="progress" text="Make Draft feature live" headText="Q2" arrowTop="35%" odd />
@@ -42,7 +41,7 @@ const Roadmap = () => {
 						text="Exclusive community for SEAT holders goes live"
 						headText="Q2"
 						arrowTop="10%"
-						positionMob="-15%"
+						position="-15%"
 					/>
 					<RoadmapComp status="not done" text="Polish Simplr Collection App" headText="Q3" arrowTop="35%" odd />
 					<RoadmapComp
@@ -50,7 +49,7 @@ const Roadmap = () => {
 						text="Roll out new Collection type."
 						headText="Q3"
 						arrowTop="35%"
-						positionMob="-15%"
+						position="-15%"
 					/>
 					<RoadmapComp
 						status="not done"
@@ -64,7 +63,7 @@ const Roadmap = () => {
 						text="Launch NFT marketplace for Primary Sales"
 						headText="Q3"
 						arrowTop="35%"
-						positionMob="-15%"
+						position="-15%"
 					/>
 					<RoadmapComp
 						status="not done"
@@ -78,8 +77,7 @@ const Roadmap = () => {
 						text="Simplr Collection goes Multichain"
 						headText="2023, Q2"
 						arrowTop="35%"
-						positionMob="-27%"
-						positionDesk="-27%"
+						position="-27%"
 					/>
 					<RoadmapComp status="not done" text="Simplr Bridge Beta goes live" headText="Q4" arrowTop="35%" odd />
 				</Box>

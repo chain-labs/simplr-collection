@@ -9,19 +9,18 @@ interface props {
 	status?: string;
 	text: string;
 	headText: string;
-	positionMob?: string;
-	positionDesk?: string;
+	position?: string;
 	arrowTop: string;
 }
 
-const RoadmapComp = ({ status, odd, text, headText, positionMob, positionDesk, arrowTop }: props) => {
+const RoadmapComp = ({ status, odd, text, headText, position, arrowTop }: props) => {
 	return (
 		<Box mt="80px">
 			<Box width="290%" display="flex" alignItems="center" justifyContent="space-between">
 				<If
 					condition={!odd}
 					then={
-						<Text as="h4" ml={positionMob}>
+						<Text as="h4" ml={position}>
 							{headText}
 						</Text>
 					}
