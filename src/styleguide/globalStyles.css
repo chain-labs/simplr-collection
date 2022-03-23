@@ -92,8 +92,7 @@ a:hover {
     background:#E0EAFF;
     border-radius: 10px;
     width:257px;
-    /* height:86px; */
-	right: -755%;
+	right: -245%;
     position: absolute;
     display: inline-block;
 }
@@ -103,7 +102,7 @@ a:hover {
     height: 0px;
     width: 0px;
     top: 35%;
-    left: -29px; /* 1px buffer for zooming problems while rendering*/
+    left: -29px; 
     border-width: 15px;
     border-color: transparent #E0EAFF transparent transparent;
     border-style: solid;
@@ -111,18 +110,29 @@ a:hover {
 .pointedLeftBox {
     background:#E0EAFF;
     border-radius: 10px;
-    width:257px;
-    /* height:86px; */
-	left: -850%;
+    width: 257px;
+	right: 108%;
+	min-height: 56px;
     position: absolute;
-    display: inline-block;
+    display: inline-block;	
+}
+@media screen and (max-width: 800px) {
+	.pointedLeftBox {
+		right: 100px;
+    width:150px;
+	}
+	.pointedRightBox {
+		right: -160px;
+    width:150px;
+	}
 }
 .pointedLeftBox:before {
     content:"";
     position: absolute;
     height: 0px;
     width: 0px;
-    left: 255px; /* 1px buffer for zooming problems while rendering*/
+	left:100%;
+	top: 35%;
     border-width: 15px;
     border-color: transparent transparent transparent #E0EAFF;
     border-style: solid;
