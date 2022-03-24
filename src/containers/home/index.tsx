@@ -8,9 +8,9 @@ const HomePage = () => {
 	return (
 		<Box width="100vw" height="300vh" mb="wxs">
 			<Hero />
-			{/* <Features /> */}
 			<HowItWorks />
 			<CollectionTypes />
+			<Features />
 		</Box>
 	);
 };

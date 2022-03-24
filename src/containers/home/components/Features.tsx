@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Box from 'src/components/Box';
 import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { randomIntFromInterval } from './utils';
 import { random } from './utils';
 import theme from 'src/styleguide/theme';
 
@@ -13,14 +12,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FEATURES = [
 	{
-		image: 'presale.png',
-		title: 'Pre-Sale',
-		info: 'Host an early-bird sale or presale for your collection, whether or not you have a whitelist.',
+		image: 'gas.png',
+		title: 'Lower Gas Costs',
+		info: 'Save upto 87% of gas than it would take to setup a smart contract by your own.',
 	},
 	{
-		image: 'reveal.png',
-		title: 'Delayed Reveal',
-		info: 'Launch your NFT when it suits you as a part of your strategic debut plan.',
+		image: 'dashboard.png',
+		title: 'Easy to use Dashboard',
+		info: 'An easy to use dashboard to manage your smart contract.',
+	},
+	{
+		image: 'affiliate.png',
+		title: 'Affiliates',
+		info: 'Making your collection available to affiliates so that they can start promoting on your behalf.',
 	},
 	{
 		image: 'airdrop.png',
@@ -33,9 +37,14 @@ const FEATURES = [
 		info: '	Splitting the payments collected based on the number of shares each address receives.',
 	},
 	{
-		image: 'affiliate.png',
-		title: 'Affiliates',
-		info: 'Making your collection available to affiliates so that they can start promoting on your behalf.',
+		image: 'presale.png',
+		title: 'Pre-Sale',
+		info: 'Host an early-bird sale or presale for your collection, whether or not you have a whitelist.',
+	},
+	{
+		image: 'reveal.png',
+		title: 'Delayed Reveal',
+		info: 'Launch your NFT when it suits you as a part of your strategic debut plan.',
 	},
 	{
 		image: 'royalties.png',
@@ -158,7 +167,13 @@ const Features = () => {
 	}, []);
 
 	return (
-		<Box mt="mxxxl" pt="wxs" width={{ mobS: '90vw', tabS: '55rem', deskM: '110rem' }} mx="auto" column center>
+		<Box
+			pt={{ mobS: 'wm', tabS: '5rem' }}
+			width={{ mobS: '90vw', tabS: '55rem', deskM: '110rem' }}
+			mx="auto"
+			column
+			center
+		>
 			<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }} id="features">
 				Game Changing Features
 			</Text>
@@ -193,7 +208,7 @@ const Features = () => {
 				For your smart contract, you can select from a variety of modules. It’s as easy as plugging and playing.
 			</Text>
 			<Box
-				mt="7.4rem"
+				mt={{ mobS: 'mxxxl', tabS: '7.4rem', deskM: 'wm' }}
 				width="100%"
 				display="flex"
 				flexDirection={{ mobS: 'column', tabS: 'row' }}
