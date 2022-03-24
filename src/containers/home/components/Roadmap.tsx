@@ -36,6 +36,7 @@ const Roadmap = () => {
 								text={array.text}
 								headText={array.headText}
 								position={array.position}
+								top={array.top}
 								arrowTop="35%"
 								odd={roadmapArray.indexOf(array) % 2 === 0 ? false : true}
 							/>

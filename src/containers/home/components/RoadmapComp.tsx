@@ -11,11 +11,12 @@ interface props {
 	headText: string;
 	position?: string;
 	arrowTop: string;
+	top: object;
 }
 
-const RoadmapComp = ({ status, odd, text, headText, position, arrowTop }: props) => {
+const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: props) => {
 	return (
-		<Box mt="80px">
+		<Box mt={top}>
 			<Box width="290%" display="flex" alignItems="center" justifyContent="space-between">
 				<If
 					condition={!odd}
