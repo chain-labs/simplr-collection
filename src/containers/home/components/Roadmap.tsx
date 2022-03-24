@@ -3,6 +3,7 @@ import React from 'react';
 import Box from 'src/components/Box';
 import Text from 'src/components/Text';
 import RoadmapComp from './RoadmapComp';
+import { roadmapArray } from './utils';
 
 const Roadmap = () => {
 	return (
@@ -28,58 +29,18 @@ const Roadmap = () => {
 					"
 				></Box>
 				<Box position="absolute" column>
-					<RoadmapComp
-						status="done"
-						text="Launch Simplr Collection on Polygon and Ethereum"
-						headText="2022, Q1"
-						position="-27%"
-						arrowTop="35%"
-					/>
-					<RoadmapComp status="progress" text="Make Draft feature live" headText="Q2" arrowTop="35%" odd />
-					<RoadmapComp
-						status="not done"
-						text="Exclusive community for SEAT holders goes live"
-						headText="Q2"
-						arrowTop="10%"
-						position="-15%"
-					/>
-					<RoadmapComp status="not done" text="Polish Simplr Collection App" headText="Q3" arrowTop="35%" odd />
-					<RoadmapComp
-						status="not done"
-						text="Roll out new Collection type."
-						headText="Q3"
-						arrowTop="35%"
-						position="-15%"
-					/>
-					<RoadmapComp
-						status="not done"
-						text="Partner with multiple NFT communities"
-						headText="Q3"
-						arrowTop="35%"
-						odd
-					/>
-					<RoadmapComp
-						status="not done"
-						text="Launch NFT marketplace for Primary Sales"
-						headText="Q3"
-						arrowTop="35%"
-						position="-15%"
-					/>
-					<RoadmapComp
-						status="not done"
-						text="Adding Analytics to Creator Dashboard "
-						headText="Q4"
-						arrowTop="35%"
-						odd
-					/>
-					<RoadmapComp
-						status="not done"
-						text="Simplr Collection goes Multichain"
-						headText="2023, Q2"
-						arrowTop="35%"
-						position="-27%"
-					/>
-					<RoadmapComp status="not done" text="Simplr Bridge Beta goes live" headText="Q4" arrowTop="35%" odd />
+					{roadmapArray?.map((array) => {
+						return (
+							<RoadmapComp
+								status={array.status}
+								text={array.text}
+								headText={array.headText}
+								position={array.position}
+								arrowTop="35%"
+								odd={roadmapArray.indexOf(array) % 2 === 0 ? false : true}
+							/>
+						);
+					})}
 				</Box>
 			</Box>
 		</Box>
