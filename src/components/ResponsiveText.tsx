@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import If from './If';
 import Text, { TextProps } from './Text';
 

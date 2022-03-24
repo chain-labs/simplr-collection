@@ -7,6 +7,8 @@ import ResponsiveImage from './ResponsiveImage';
 import Text from './Text';
 import { gsap } from 'gsap';
 import { ArrowRight, DiscordLogo, InstagramLogo, TwitterLogo, X } from 'phosphor-react';
+import scrollIntoView from 'src/utils/scrollIntoView';
+import ResponsiveText from './ResponsiveText';
 
 const NavLink = ({ href, text, as, closeDrawer }) => {
 	return (
@@ -125,28 +127,28 @@ const Navbar = () => {
 				</Box>
 				<ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" />
 				<Box row alignItems="center">
-					<Link href="#features" as="/">
-						<Text
-							as="h5"
-							color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
-							display={{ mobS: 'none', tabS: 'block' }}
-							px="ms"
-							mr="mxxl"
-						>
-							Features
-						</Text>
-					</Link>
-					<Link href="#how" as="/">
-						<Text
-							as="h5"
-							color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
-							display={{ mobS: 'none', tabS: 'block' }}
-							px="ms"
-							mr="mxxl"
-						>
-							How it Works
-						</Text>
-					</Link>
+					<Text
+						as="h5"
+						cursor="pointer"
+						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
+						display={{ mobS: 'none', tabS: 'block' }}
+						px="ms"
+						mr="mxxl"
+						onClick={() => scrollIntoView('features')}
+					>
+						Features
+					</Text>
+					<Text
+						as="h5"
+						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
+						display={{ mobS: 'none', tabS: 'block' }}
+						px="ms"
+						mr="mxxl"
+						cursor="pointer"
+						onClick={() => scrollIntoView('how')}
+					>
+						How it Works
+					</Text>
 					<Link href="#roadmap" as="/">
 						<Text
 							as="h5"
@@ -154,12 +156,14 @@ const Navbar = () => {
 							display={{ mobS: 'none', tabS: 'block' }}
 							px="ms"
 							mr="mxxl"
+							cursor="pointer"
+							onClick={() => scrollIntoView('roadmap')}
 						>
 							Roadmap
 						</Text>
 					</Link>
 					<ButtonComp bg="primary" height="48px" px="mxxxl">
-						<Text as="h5">Early Access</Text>
+						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
 					</ButtonComp>
 				</Box>
 			</Box>
