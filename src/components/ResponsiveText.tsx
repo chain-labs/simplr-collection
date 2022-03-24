@@ -10,8 +10,6 @@ interface Props extends TextProps {
 }
 
 const ResponsiveText = ({ mob, tab, desk, text, ...restProps }: Props) => {
-	console.log({ text });
-
 	return (
 		<React.Fragment>
 			<If
