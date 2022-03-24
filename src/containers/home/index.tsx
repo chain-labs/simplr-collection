@@ -7,7 +7,7 @@ const HomePage = () => {
 	return (
 		<Box width="100vw" height="300vh" mb="wxs">
 			<Hero />
-			<Features />
+			{/* <Features /> */}
 			<HowItWorks />
 		</Box>
 	);

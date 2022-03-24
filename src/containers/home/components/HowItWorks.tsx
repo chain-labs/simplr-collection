@@ -1,11 +1,16 @@
 import Box from 'src/components/Box';
 import ResponsiveText from 'src/components/ResponsiveText';
-import Text from 'src/components/Text';
 import theme from 'src/styleguide/theme';
 
 const HowItWorks = () => {
 	return (
-		<Box mx="auto" width={{ mobS: '90vw', deskM: '108rem' }} mt="wm" column alignItems="center">
+		<Box
+			mx="auto"
+			width={{ mobS: '90vw', deskM: '108rem' }}
+			mt={{ mobS: 'wm', tabS: 'wl', deskM: 'wxxl' }}
+			column
+			alignItems="center"
+		>
 			<ResponsiveText desk="h1" tab="h2" mob="h3" color="simply-blue" text="How Simplr Collection works" />
 			<ResponsiveText
 				desk="b3"
@@ -14,7 +19,7 @@ const HowItWorks = () => {
 				text="Fill out the form, play with different modules, and Launch your Collection. Here’s a quick video to make things easier"
 				maxWidth="50rem"
 				textAlign="center"
-				mt="mm"
+				mt={{ mobS: 'ms', tabS: 'mm' }}
 				mb="mxxxl"
 			/>
 			{/* // @ts-expect-error frame-level-media-query */}
