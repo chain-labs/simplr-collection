@@ -5,6 +5,7 @@ import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ResponsiveText from 'src/components/ResponsiveText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,73 +53,36 @@ const Hero = () => {
 				pt={{ mobS: 'wxl', tabS: '17rem', deskM: '19rem' }}
 			>
 				<Box column center>
-					<Text
-						as="headline"
+					<ResponsiveText
+						mob="h2"
+						tab="h1"
+						desk="headline"
+						text="Create and launch cost effective NFT Collections"
 						color="simply-blue"
-						lineHeight="120%"
-						maxWidth="84rem"
 						textAlign="center"
-						mb="mm"
-						display={{ mobS: 'none', tabS: 'block' }}
+						maxWidth={{ mobS: '27rem', tabS: '50rem', deskM: '80rem' }}
 						id="hero-headline"
-					>
-						Create and manage cost effective NFT Collections
-					</Text>
-					<Text
-						as="h2"
-						color="simply-blue"
-						maxWidth="27rem"
-						textAlign="center"
-						mb="mm"
-						display={{ mobS: 'block', tabS: 'none' }}
-						id="hero-subtext"
-					>
-						Create and Manage Cost effective
-						<br /> NFT Collections
-					</Text>
-					<Text as="b2" maxWidth="53rem" textAlign="center" id="hero-subtext" display={{ mobS: 'none', tabS: 'block' }}>
+					/>
+					<Text as="b2" maxWidth={{ mobS: '25rem', tabS: '53rem' }} textAlign="center" id="hero-subtext">
 						A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without
 						any hassle.
 					</Text>
-					<Text
-						as="b2"
-						maxWidth="25rem"
-						textAlign="center"
-						mb="ml"
-						id="hero-subtext"
-						display={{ mobS: 'block', tabS: 'none' }}
+					<Box
+						column
+						flexDirection={{ mobS: 'column-reverse', tabS: 'column' }}
+						alignItems="center"
+						mt={{ mobS: 'ml' }}
 					>
-						Simplr is a simple to use, no-code platform to create NFT smart contracts so that you can launch your NFTs
-						without the hassle.
-					</Text>
-					<Box column flexDirection={{ mobS: 'column-reverse', tabS: 'column' }} alignItems="center">
-						<Box
-							my="wxs"
-							display="flex"
-							flexDirection={{ mobS: 'column', tabS: 'row' }}
-							width={{ mobS: '90vw', tabS: '46rem' }}
+						<ButtonComp
+							bg="primary"
+							px="wxs"
+							height="48px"
+							width={{ mobS: '100%', tabS: 'unset' }}
+							mb={{ mobS: 'mm', tabS: 'ws' }}
+							className="hero-cta-l"
 						>
-							<ButtonComp
-								bg="primary"
-								px="wxs"
-								height="48px"
-								mr="mxl"
-								width={{ mobS: '100%', tabS: 'unset' }}
-								mb={{ mobS: 'mm', tabS: 'unset' }}
-								className="hero-cta-l"
-							>
-								<Text as="h4">Enter Waitlist</Text>
-							</ButtonComp>
-							<ButtonComp
-								bg="secondary"
-								px="wxs"
-								height="48px"
-								width={{ mobS: '100%', tabS: 'unset' }}
-								className="hero-cta-r"
-							>
-								<Text as="h4">Join Discord</Text>
-							</ButtonComp>
-						</Box>
+							<Text as="h4">Enter Waitlist</Text>
+						</ButtonComp>
 						<ResponsiveImage
 							className="hero-image"
 							mobile="/static/images/mobile/hero_image.png"
@@ -127,36 +91,54 @@ const Hero = () => {
 						/>
 					</Box>
 				</Box>
-				<Box
-					display="flex"
-					flexDirection={{ mobS: 'column-reverse', tabS: 'row' }}
-					justifyContent="space-between"
-					py={{ mobS: '0', tabS: 'ws' }}
-					px={{ mobS: '0', tabS: 'mxxxl' }}
-					alignItems={{ mobS: 'center', tabS: 'flex-start', deskM: 'center' }}
-				>
-					<Box
+				<Box column center mt={{ mobS: 'wm', tabS: 'wxs', deskM: 'wxl' }}>
+					<ResponsiveText
+						tab="h2"
+						desk="h1"
+						color="simply-blue"
+						text="What is SImplr Collection solving?"
+						textAlign="center"
 						className="info-text"
-						mr={{ mobS: '0', tabS: 'mxxl' }}
-						maxWidth={{ mobS: '85vw', tabS: '50%', deskM: '57rem' }}
-						mt={{ mobS: 'ms', tabS: '0' }}
-					>
-						<Text as="b2">
-							While we love the world of NFTs, we know there is a lot about it that could do with a few tweaks. At
-							Simplr, we believe that the ultimate form of sophistication is simplicity.
-						</Text>
-						<Text as="b2" mt="ml">
-							That&apos;s why we&apos;ve launched a simple to use, no-code platform to create NFT smart contracts so
-							that you can launch your NFTs without the hassle. Let us handle the blockchain and NFT complexities so
-							that you can focus your energies on growing your collection and brand.
-						</Text>
-					</Box>
-					<ResponsiveImage
-						className="info-image"
-						mobile="/static/images/mobile/about.png"
-						tab="/static/images/tab/about.png"
-						desk="/static/images/desktop/about.png"
 					/>
+					<Box
+						display="flex"
+						flexDirection={{ mobS: 'column-reverse', tabS: 'row' }}
+						justifyContent="space-between"
+						mt={{ tabS: 'mxxxl', deskM: 'wxs' }}
+						px={{ mobS: '0', tabS: 'mxxxl' }}
+						alignItems={{ mobS: 'center', tabS: 'flex-start', deskM: 'center' }}
+					>
+						<Box
+							className="info-text"
+							mr={{ mobS: '0', tabS: 'mxxl' }}
+							maxWidth={{ mobS: '85vw', tabS: '50%', deskM: '54rem' }}
+							mt={{ mobS: 'ms', tabS: '0' }}
+						>
+							<Text as="b2">
+								While we love the world of NFTs, we know there is a lot about it that could do with a few tweaks. At
+								Simplr, we believe that the ultimate form of sophistication is simplicity.
+							</Text>
+							<Text as="b2" mt="ml">
+								That&apos;s why we&apos;ve launched a simple to use, no-code platform to create NFT smart contracts so
+								that you can launch your NFTs without the hassle. Let us handle the blockchain and NFT complexities so
+								that you can focus your energies on growing your collection and brand.
+							</Text>
+						</Box>
+						<ResponsiveText
+							mob="h3"
+							text="What is Simplr Collection solving?"
+							color="simply-blue"
+							textAlign="center"
+							maxWidth={{ mobS: '24rem', tabS: 'unset' }}
+							mt="ml"
+						/>
+						<ResponsiveImage
+							className="info-image"
+							mobile="/static/images/mobile/about.png"
+							tab="/static/images/tab/about.png"
+							desk="/static/images/desktop/about.png"
+						/>
+					</Box>
 				</Box>
 			</Box>
 		</Box>
