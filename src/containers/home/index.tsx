@@ -2,6 +2,7 @@ import Box from 'src/components/Box';
 import Features from './components/Features';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
+import CollectionTypes from './components/CollectionTypes';
 
 const HomePage = () => {
 	return (
@@ -9,6 +10,7 @@ const HomePage = () => {
 			<Hero />
 			{/* <Features /> */}
 			<HowItWorks />
+			<CollectionTypes />
 		</Box>
 	);
 };
