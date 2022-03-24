@@ -111,18 +111,18 @@ a:hover {
     background:#E0EAFF;
     border-radius: 10px;
     width: 257px;
-	right: 108%;
+	right: 100%;
 	min-height: 56px;
     position: absolute;
     display: inline-block;	
 }
 @media screen and (max-width: 800px) {
 	.pointedLeftBox {
-		right: 100px;
-    width:150px;
+		right: 80px;
+    width:140px;
 	}
 	.pointedRightBox {
-		right: -160px;
+		right: -145px;
     width:150px;
 	}
 }
