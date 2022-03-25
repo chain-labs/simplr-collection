@@ -1,6 +1,7 @@
 import { Check } from 'phosphor-react';
 import React from 'react';
 import Box from 'src/components/Box';
+import ResponsiveText from 'src/components/ResponsiveText';
 import Text from 'src/components/Text';
 import RoadmapComp from './RoadmapComp';
 import { roadmapArray } from './utils';
@@ -8,15 +9,19 @@ import { roadmapArray } from './utils';
 const Roadmap = () => {
 	return (
 		<Box pb="wxxl">
-			<Text as="headline" textAlign="center" color="simply-blue" mt="wxs">
-				What’s in the Future
-			</Text>
+			<ResponsiveText
+				desk="h1"
+				tab="h2"
+				mob="h3"
+				textAlign="center"
+				color="simply-blue"
+				mt="wxs"
+				text="What’s in the Future"
+			/>
 			<Box>
-				<Text as="b3" textAlign="center">
-					We make promises that we know we can deliver.{' '}
-				</Text>
-				<Text as="b3" textAlign="center" mb="ws">
-					Here’s the roadmap of what the future holds for Simplr Collection.{' '}
+				<Text as="b3" textAlign="center" mx="auto" maxWidth={{ mobS: '25rem', tabS: '57rem' }}>
+					We make promises that we know we can deliver. Here’s the roadmap of what the future holds for Simplr
+					Collection.
 				</Text>
 			</Box>
 			<Box center column>
