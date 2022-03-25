@@ -14,7 +14,7 @@ export const roadmapArray = [
 		status: 'done',
 		text: 'Launch Simplr Collection on Polygon and Ethereum',
 		headText: '2022, Q1',
-		position: '-27%',
+		position: '-22%',
 		top: { mobS: '0', tabS: '25%' },
 		arrowTop: '35%',
 	},
@@ -31,7 +31,7 @@ export const roadmapArray = [
 		headText: 'Q2',
 		top: { mobS: '85%', tabS: '70%' },
 		arrowTop: '10%',
-		position: '-15%',
+		position: '-9%',
 	},
 	{
 		status: 'not done',
@@ -46,7 +46,7 @@ export const roadmapArray = [
 		headText: 'Q3',
 		top: { mobS: '85%', tabS: '70%' },
 		arrowTop: '35%',
-		position: '-15%',
+		position: '-9%',
 	},
 	{
 		status: 'not done',
@@ -61,7 +61,7 @@ export const roadmapArray = [
 		headText: 'Q3',
 		top: { mobS: '85%', tabS: '70%' },
 		arrowTop: '35%',
-		position: '-15%',
+		position: '-9%',
 	},
 	{
 		status: 'not done',
@@ -76,7 +76,7 @@ export const roadmapArray = [
 		headText: '2023, Q2',
 		top: { mobS: '85%', tabS: '70%' },
 		arrowTop: '35%',
-		position: '-27%',
+		position: '-22%',
 	},
 	{
 		status: 'not done',

@@ -2,6 +2,7 @@ import { Check } from 'phosphor-react';
 import React from 'react';
 import Box from 'src/components/Box';
 import If from 'src/components/If';
+import ResponsiveText from 'src/components/ResponsiveText';
 import Text from 'src/components/Text';
 
 interface props {
@@ -18,16 +19,9 @@ const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: p
 	return (
 		<Box mt={top}>
 			<Box width="290%" display="flex" alignItems="center" justifyContent="space-between">
-				<If
-					condition={!odd}
-					then={
-						<Text as="h4" ml={position}>
-							{headText}
-						</Text>
-					}
-				/>
+				<If condition={!odd} then={<ResponsiveText mob="b3" tab="b3" desk="h4" text={headText} ml={position} />} />
 				<Box className={odd ? 'pointedLeftBox' : 'pointedRightBox'} py="20px" px="15px">
-					<Text as="b3">{text}</Text>
+					<ResponsiveText mob="b2" tab="b2" desk="b3" text={text} />
 				</Box>
 				<Box
 					minWidth={status === 'not done' ? '17px' : '36.6px'}
@@ -54,11 +48,7 @@ const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: p
 				</Box>
 				<If
 					condition={odd}
-					then={
-						<Text as="h4" mr={{ mobS: '50%', tabS: '50%' }} textAlign="start">
-							{headText}
-						</Text>
-					}
+					then={<ResponsiveText mob="b3" tab="b3" desk="h4" text={headText} mr={{ mobS: '58%', tabS: '55%' }} />}
 				/>
 			</Box>
 		</Box>
