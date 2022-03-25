@@ -12,6 +12,7 @@ const HomePage = () => {
 			<HowItWorks />
 			<CollectionTypes />
 			<Features />
+			<Roadmap />
 		</Box>
 	);
 };
