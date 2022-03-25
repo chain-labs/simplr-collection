@@ -15,8 +15,8 @@ export const roadmapArray = [
 		text: 'Launch Simplr Collection on Polygon and Ethereum',
 		headText: '2022, Q1',
 		position: '-80%',
-		top: { mobS: '0', tabS: '25%' },
-		arrowTop: '60%',
+		top: { mobS: '0', tabS: '30%' },
+		arrowTop: '0%',
 	},
 	{
 		status: 'progress',

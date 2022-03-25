@@ -30,11 +30,6 @@ const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: p
 					center
 					ml={odd ? (status === 'not done' ? { mobS: '45%', tabS: '46.5%' } : { mobS: '33%', tabS: '36.5%' }) : '0'}
 					mr={odd ? '0' : status === 'not done' ? { mobS: '34.5%', tabS: '36%' } : { mobS: '23.5%', tabS: '25%' }}
-					css={`
-						::before {
-							top: ${arrowTop};
-						}
-					`}
 				>
 					<If
 						condition={status === 'progress' || status === 'done'}

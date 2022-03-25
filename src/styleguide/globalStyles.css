@@ -101,7 +101,7 @@ a:hover {
     position: absolute;
     height: 0px;
     width: 0px;
-    /* top: 35%; */
+    top: 35%;
     left: -29px; 
     border-width: 15px;
     border-color: transparent #E0EAFF transparent transparent;
@@ -123,7 +123,7 @@ a:hover {
 	}
 	.pointedRightBox {
 		right: -115px;
-    width:120px;
+    	width:120px;
 	}
 	.pointedLeftBox::before {
 		top: 36%
@@ -148,7 +148,8 @@ a:hover {
     height: 0px;
     width: 0px;
 	left:100%;
-	/* top: 38%; */
+	top: 50%;
+	transform: translate(-10%, -50%);
     border-width: 15px;
     border-color: transparent transparent transparent #E0EAFF;
     border-style: solid;

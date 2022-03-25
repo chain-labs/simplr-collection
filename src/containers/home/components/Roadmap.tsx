@@ -34,7 +34,7 @@ const Roadmap = () => {
 					"
 				></Box>
 				<Box position="absolute" column>
-					{roadmapArray?.map((array) => {
+					{roadmapArray?.map((array, index) => {
 						return (
 							<RoadmapComp
 								status={array.status}
@@ -43,7 +43,7 @@ const Roadmap = () => {
 								position={array.position}
 								top={array.top}
 								arrowTop={array.arrowTop}
-								odd={roadmapArray.indexOf(array) % 2 === 0 ? false : true}
+								odd={index % 2 === 0 ? false : true}
 							/>
 						);
 					})}
