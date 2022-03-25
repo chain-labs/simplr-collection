@@ -18,7 +18,7 @@ interface props {
 const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: props) => {
 	return (
 		<Box mt={top}>
-			<Box width="290%" display="flex" alignItems="center" justifyContent="space-between">
+			<Box width="90%" display="flex" alignItems="center" justifyContent="space-between">
 				<If condition={!odd} then={<ResponsiveText mob="b3" tab="b3" desk="h4" text={headText} ml={position} />} />
 				<Box className={odd ? 'pointedLeftBox' : 'pointedRightBox'} py="20px" px="15px">
 					<ResponsiveText mob="b2" tab="b2" desk="b3" text={text} />
@@ -29,10 +29,10 @@ const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: p
 					borderRadius="100%"
 					backgroundColor="simply-blue"
 					center
-					ml={odd ? (status === 'not done' ? { mobS: '14%', tabS: '14.5%' } : { mobS: '10%', tabS: '11.5%' }) : '0'}
-					mr={odd ? '0' : status === 'not done' ? { mobS: '79.5%', tabS: '80%' } : { mobS: '75.5%', tabS: '77%' }}
+					ml={odd ? (status === 'not done' ? { mobS: '45%', tabS: '46.5%' } : { mobS: '33%', tabS: '35.5%' }) : '0'}
+					mr={odd ? '0' : status === 'not done' ? { mobS: '34.5%', tabS: '36%' } : { mobS: '23.5%', tabS: '25%' }}
 					css={`
-						:before {
+						::before {
 							top: ${arrowTop};
 						}
 					`}
@@ -48,7 +48,7 @@ const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: p
 				</Box>
 				<If
 					condition={odd}
-					then={<ResponsiveText mob="b3" tab="b3" desk="h4" text={headText} mr={{ mobS: '58%', tabS: '55%' }} />}
+					then={<ResponsiveText mob="b3" tab="b3" desk="h4" text={headText} ml={{ mobS: '40%', tabS: '62%' }} />}
 				/>
 			</Box>
 		</Box>
