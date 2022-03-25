@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import CollectionTypes from './components/CollectionTypes';
 import System from './components/Systems';
+import Roadmap from './components/Roadmap';
 
 const HomePage = () => {
 	return (
@@ -13,6 +14,7 @@ const HomePage = () => {
 			<CollectionTypes />
 			<Features />
 			<System />
+			<Roadmap />
 		</Box>
 	);
 };

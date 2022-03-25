@@ -88,3 +88,52 @@ svg {
 a:hover {
 	text-decoration: underline;
 }
+.pointedRightBox {
+    background:#E0EAFF;
+    border-radius: 10px;
+    width:257px;
+	right: -235%;
+    position: absolute;
+    display: inline-block;
+}
+.pointedRightBox:before {
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 35%;
+    left: -29px; 
+    border-width: 15px;
+    border-color: transparent #E0EAFF transparent transparent;
+    border-style: solid;
+}
+.pointedLeftBox {
+    background:#E0EAFF;
+    border-radius: 10px;
+    width: 257px;
+	right: 100%;
+	min-height: 56px;
+    position: absolute;
+    display: inline-block;	
+}
+@media screen and (max-width: 800px) {
+	.pointedLeftBox {
+		right: 80px;
+    width:140px;
+	}
+	.pointedRightBox {
+		right: -145px;
+    width:150px;
+	}
+}
+.pointedLeftBox:before {
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+	left:100%;
+	top: 38%;
+    border-width: 15px;
+    border-color: transparent transparent transparent #E0EAFF;
+    border-style: solid;
+}
