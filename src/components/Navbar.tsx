@@ -6,22 +6,30 @@ import ButtonComp from './Button';
 import ResponsiveImage from './ResponsiveImage';
 import Text from './Text';
 import { gsap } from 'gsap';
-import { ArrowRight, DiscordLogo, InstagramLogo, TwitterLogo, X } from 'phosphor-react';
+import { ArrowRight, X } from 'phosphor-react';
+import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import ResponsiveText from './ResponsiveText';
+import { DISCORD_INVITE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
 
-const NavLink = ({ href, text, as, closeDrawer }) => {
+const NavLink = ({ href, text, closeDrawer }) => {
 	return (
-		<Link href={href} as={as}>
-			<Box borderBottom={`1px solid ${theme.colors['blue-10']}`} py="ms" pl="mxxxl" onClick={() => closeDrawer()}>
-				<Box between width="80%">
-					<Text as="h6" color="simply-blue">
-						{text}
-					</Text>
-					<ArrowRight size="20" color={theme.colors['simply-blue']} />
-				</Box>
+		<Box
+			borderBottom={`1px solid ${theme.colors['blue-10']}`}
+			py="ms"
+			pl="mxxxl"
+			onClick={() => {
+				scrollIntoView(href);
+				closeDrawer();
+			}}
+		>
+			<Box between width="80%">
+				<Text as="h6" color="simply-blue">
+					{text}
+				</Text>
+				<ArrowRight size="20" color={theme.colors['simply-blue']} />
 			</Box>
-		</Link>
+		</Box>
 	);
 };
 
@@ -82,27 +90,27 @@ const Navbar = () => {
 								</Box>
 							</Box>
 							<Box borderTop={`1px solid ${theme.colors['blue-10']}`}>
-								<NavLink href="#features" as="/" text="Features" closeDrawer={closeDrawer} />
-								<NavLink href="#how" as="/" text="How it Works" closeDrawer={closeDrawer} />
-								<NavLink href="#roadmap" as="/" text="Roadmap" closeDrawer={closeDrawer} />
+								<NavLink href="features" text="Features" closeDrawer={closeDrawer} />
+								<NavLink href="how" text="How it Works" closeDrawer={closeDrawer} />
+								<NavLink href="roadmap" text="Roadmap" closeDrawer={closeDrawer} />
 							</Box>
 						</Box>
 						<Box>
 							<Box pl="mxxxl" pb="mxl" borderBottom={`1px solid ${theme.colors['blue-10']}`}>
 								<Box row alignItems="center">
-									<InstagramLogo size="20" color={theme.colors['simply-blue']} />
+									<InstagramFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Instagram
 									</Text>
 								</Box>
-								<Box row alignItems="center" mt="ms">
-									<DiscordLogo weight="fill" size="20" color={theme.colors['simply-blue']} />
+								<Box as="a" href={DISCORD_INVITE} target="_blank" row alignItems="center" mt="ms">
+									<DiscordFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Join our Discord
 									</Text>
 								</Box>
-								<Box row alignItems="center" mt="ms">
-									<TwitterLogo weight="fill" size="20" color={theme.colors['simply-blue']} />
+								<Box as="a" href={TWITTER_HANDLE} target="_blank" row alignItems="center" mt="ms">
+									<TwitterFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Twitter
 									</Text>
@@ -126,7 +134,7 @@ const Navbar = () => {
 					<Box bg="simply-blue" width="100%" height="0.3rem" />
 				</Box>
 				<ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" />
-				<Box row alignItems="center">
+				<Box row alignItems="center" height="48px">
 					<Text
 						as="h5"
 						cursor="pointer"
@@ -162,9 +170,9 @@ const Navbar = () => {
 							Roadmap
 						</Text>
 					</Link>
-					<ButtonComp bg="primary" height="48px" px="mxxxl">
+					{/* <ButtonComp bg="primary" height="48px" px="mxxxl">
 						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
-					</ButtonComp>
+					</ButtonComp> */}
 				</Box>
 			</Box>
 		</Box>

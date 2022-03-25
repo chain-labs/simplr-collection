@@ -24,6 +24,7 @@ const HowItWorks = () => {
 			/>
 			{/* // @ts-expect-error frame-level-media-query */}
 			<Box
+				id="how"
 				width={{ mobS: '28.5rem', tabS: '75rem', deskM: '108rem' }}
 				height={{ mobS: '15rem', tabS: '45rem', deskM: '59rem' }}
 			>

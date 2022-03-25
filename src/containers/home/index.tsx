@@ -1,6 +1,7 @@
 import Box from 'src/components/Box';
 import Contacts from './components/Contacts';
 import Features from './components/Features';
+import Footer from './components/Footer';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import CollectionTypes from './components/CollectionTypes';
@@ -17,6 +18,7 @@ const HomePage = () => {
 			<System />
 			<Roadmap />
 			<Contacts />
+			<Footer />
 		</Box>
 	);
 };

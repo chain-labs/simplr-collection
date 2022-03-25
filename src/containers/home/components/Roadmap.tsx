@@ -8,7 +8,7 @@ import { roadmapArray } from './utils';
 
 const Roadmap = () => {
 	return (
-		<Box pb="wxxl">
+		<Box pb="wxxl" id="roadmap">
 			<ResponsiveText
 				desk="h1"
 				tab="h2"
