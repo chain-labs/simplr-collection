@@ -16,6 +16,7 @@ const HomePage = () => {
 			<Features />
 			<System />
 			<Roadmap />
+			<Contacts />
 		</Box>
 	);
 };
