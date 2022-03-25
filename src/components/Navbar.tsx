@@ -2,14 +2,12 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import theme from 'src/styleguide/theme';
 import Box from './Box';
-import ButtonComp from './Button';
 import ResponsiveImage from './ResponsiveImage';
 import Text from './Text';
 import { gsap } from 'gsap';
 import { ArrowRight, X } from 'phosphor-react';
 import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
-import ResponsiveText from './ResponsiveText';
 import { DISCORD_INVITE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
 
 const NavLink = ({ href, text, closeDrawer }) => {
@@ -90,9 +88,9 @@ const Navbar = () => {
 								</Box>
 							</Box>
 							<Box borderTop={`1px solid ${theme.colors['blue-10']}`}>
-								<NavLink href="features" text="Features" closeDrawer={closeDrawer} />
+								<NavLink href="feature" text="Features" closeDrawer={closeDrawer} />
 								<NavLink href="how" text="How it Works" closeDrawer={closeDrawer} />
-								<NavLink href="roadmap" text="Roadmap" closeDrawer={closeDrawer} />
+								<NavLink href="rm" text="Roadmap" closeDrawer={closeDrawer} />
 							</Box>
 						</Box>
 						<Box>
@@ -138,17 +136,17 @@ const Navbar = () => {
 					<Text
 						as="h5"
 						cursor="pointer"
-						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
+						color="simply-blue"
 						display={{ mobS: 'none', tabS: 'block' }}
 						px="ms"
 						mr="mxxl"
-						onClick={() => scrollIntoView('features')}
+						onClick={() => scrollIntoView('feature')}
 					>
 						Features
 					</Text>
 					<Text
 						as="h5"
-						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
+						color="simply-blue"
 						display={{ mobS: 'none', tabS: 'block' }}
 						px="ms"
 						mr="mxxl"
@@ -157,19 +155,17 @@ const Navbar = () => {
 					>
 						How it Works
 					</Text>
-					<Link href="#roadmap" as="/">
-						<Text
-							as="h5"
-							color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
-							display={{ mobS: 'none', tabS: 'block' }}
-							px="ms"
-							mr="mxxl"
-							cursor="pointer"
-							onClick={() => scrollIntoView('roadmap')}
-						>
-							Roadmap
-						</Text>
-					</Link>
+					<Text
+						as="h5"
+						color="simply-blue"
+						display={{ mobS: 'none', tabS: 'block' }}
+						px="ms"
+						mr="mxxl"
+						cursor="pointer"
+						onClick={() => scrollIntoView('rm')}
+					>
+						Roadmap
+					</Text>
 					{/* <ButtonComp bg="primary" height="48px" px="mxxxl">
 						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
 					</ButtonComp> */}

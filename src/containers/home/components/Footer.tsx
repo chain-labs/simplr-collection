@@ -31,7 +31,7 @@ const Footer = () => {
 						color="simply-blue"
 						mr="mxxxl"
 						mb={{ mobS: 'mm', tabS: '0' }}
-						onClick={() => scrollIntoView('hero-headline')}
+						onClick={() => scrollIntoView('hero-subtext')}
 						cursor="pointer"
 					>
 						Home
@@ -41,7 +41,7 @@ const Footer = () => {
 						color="simply-blue"
 						mr="mxxxl"
 						mb={{ mobS: 'mm', tabS: '0' }}
-						onClick={() => scrollIntoView('features')}
+						onClick={() => scrollIntoView('feature')}
 						cursor="pointer"
 					>
 						Features
@@ -61,7 +61,7 @@ const Footer = () => {
 						color="simply-blue"
 						mr="mxxxl"
 						mb={{ mobS: 'mm', tabS: '0' }}
-						onClick={() => scrollIntoView('roadmap')}
+						onClick={() => scrollIntoView('rm')}
 						cursor="pointer"
 					>
 						Roadmap
