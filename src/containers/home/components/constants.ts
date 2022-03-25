@@ -2,6 +2,8 @@ export const TWITTER_HANDLE = 'https://twitter.com/simplrdao';
 export const DISCORD_INVITE = 'https://dsc.gg/simplr';
 export const INSTAGRAM_HANDLE = 'https://instagram.com/simplrdao';
 export const YOUTUBE_VIDEO_URL = 'https://www.youtube.com/embed/SSo_EIwHSd4';
+export const WAITLIST_FORM_URL =
+	'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform';
 
 export const SYSTEM_LIST = [
 	{

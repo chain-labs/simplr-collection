@@ -6,9 +6,16 @@ import { gsap } from 'gsap';
 import { ArrowRight, X } from 'phosphor-react';
 import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
-import { DISCORD_INVITE, INSTAGRAM_HANDLE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
+import {
+	DISCORD_INVITE,
+	INSTAGRAM_HANDLE,
+	TWITTER_HANDLE,
+	WAITLIST_FORM_URL,
+} from 'src/containers/home/components/constants';
 import LogoMob from '../svgs/Logo_mobile.svg';
 import LogoDesk from '../svgs/Logo_desktop.svg';
+import ButtonComp from './Button';
+import ResponsiveText from './ResponsiveText';
 
 const NavLink = ({ href, text, closeDrawer }) => {
 	return (
@@ -170,9 +177,11 @@ const Navbar = () => {
 					>
 						Roadmap
 					</Text>
-					{/* <ButtonComp bg="primary" height="48px" px="mxxxl">
-						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
-					</ButtonComp> */}
+					<Box as="a" href={WAITLIST_FORM_URL} target="_blank">
+						<ButtonComp bg="primary" height="48px" px="mxxxl">
+							<ResponsiveText mob="h4" tab="h6" desk="h5" text="Enter Waitlist" />
+						</ButtonComp>
+					</Box>
 				</Box>
 			</Box>
 		</Box>

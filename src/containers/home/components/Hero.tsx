@@ -6,6 +6,7 @@ import Text from 'src/components/Text';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ResponsiveText from 'src/components/ResponsiveText';
+import { WAITLIST_FORM_URL } from './constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,7 +61,7 @@ const Hero = () => {
 						text="Simplified platform for creators to launch NFT collections quickly and economically."
 						color="simply-blue"
 						textAlign="center"
-						maxWidth={{ mobS: '27rem', tabS: '50rem', deskM: '80rem' }}
+						maxWidth={{ mobS: '27rem', tabS: '50rem', deskM: '59rem' }}
 						id="hero-headline"
 						lineHeight="120%"
 						mb="2%"
@@ -83,13 +84,7 @@ const Hero = () => {
 							mb={{ mobS: 'mm', tabS: 'ws' }}
 							className="hero-cta-l"
 						>
-							<Box
-								as="a"
-								href={
-									'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform'
-								}
-								target="_blank"
-							>
+							<Box as="a" href={WAITLIST_FORM_URL} target="_blank">
 								<Text as="h4">Enter Waitlist</Text>
 							</Box>
 						</ButtonComp>
