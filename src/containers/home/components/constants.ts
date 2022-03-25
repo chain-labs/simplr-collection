@@ -1,7 +1,7 @@
 export const TWITTER_HANDLE = 'https://twitter.com/simplrdao';
 export const DISCORD_INVITE = 'https://dsc.gg/simplr';
 export const INSTAGRAM_HANDLE = 'https://instagram.com/simplrdao';
-export const YOUTUBE_VIDEO_URL = 'https://www.youtube.com/embed/SSo_EIwHSd4';
+export const YOUTUBE_VIDEO_URL = 'https://www.youtube.com/embed/BtdfahO8NbM';
 
 export const SYSTEM_LIST = [
 	{
