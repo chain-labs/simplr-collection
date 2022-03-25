@@ -116,14 +116,30 @@ a:hover {
     position: absolute;
     display: inline-block;	
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
 	.pointedLeftBox {
 		right: 80px;
-    width:140px;
+    width:120px;
 	}
 	.pointedRightBox {
-		right: -145px;
-    width:150px;
+		right: -105px;
+    width:120px;
+	}
+	.pointedLeftBox::before {
+		top: 20%
+	}
+	.pointedRightBox::before {
+		
+	}
+}
+@media screen and (min-width:750px) and( max-width: 1024px) {
+	.pointedLeftBox {
+		right: 95px;
+    width:215px;
+	}
+	.pointedRightBox {
+		right: -215px;
+    width:215px;
 	}
 }
 .pointedLeftBox:before {
