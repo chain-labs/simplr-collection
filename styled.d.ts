@@ -102,6 +102,7 @@ declare module 'styled-components' {
 			'gray-10': string;
 
 			'purple-10': string;
+			'purple-40': string;
 			'purple-50': string;
 		};
 		space: string[] & Partial<ISpace>;

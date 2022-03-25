@@ -112,6 +112,7 @@ const colors: DefaultTheme['colors'] = {
 	'yellow-90': '#7A410D',
 
 	'purple-10': '#F0EFFC',
+	'purple-40': '#AAC6FC',
 	'purple-50': '#7E47DF',
 
 	'white-00': '#FAFAFF',

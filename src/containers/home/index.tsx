@@ -1,4 +1,5 @@
 import Box from 'src/components/Box';
+import Contacts from './components/Contacts';
 import Features from './components/Features';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
@@ -15,6 +16,7 @@ const HomePage = () => {
 			<Features />
 			<System />
 			<Roadmap />
+			<Contacts />
 		</Box>
 	);
 };
