@@ -3,7 +3,6 @@ import React from 'react';
 import Box from 'src/components/Box';
 import If from 'src/components/If';
 import ResponsiveText from 'src/components/ResponsiveText';
-import Text from 'src/components/Text';
 
 interface props {
 	odd?: boolean;
@@ -29,13 +28,8 @@ const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: p
 					borderRadius="100%"
 					backgroundColor="simply-blue"
 					center
-					ml={odd ? (status === 'not done' ? { mobS: '45%', tabS: '46.5%' } : { mobS: '33%', tabS: '35.5%' }) : '0'}
+					ml={odd ? (status === 'not done' ? { mobS: '45%', tabS: '46.5%' } : { mobS: '33%', tabS: '36.5%' }) : '0'}
 					mr={odd ? '0' : status === 'not done' ? { mobS: '34.5%', tabS: '36%' } : { mobS: '23.5%', tabS: '25%' }}
-					css={`
-						::before {
-							top: ${arrowTop};
-						}
-					`}
 				>
 					<If
 						condition={status === 'progress' || status === 'done'}

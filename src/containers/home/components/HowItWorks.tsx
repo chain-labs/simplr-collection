@@ -1,6 +1,7 @@
 import Box from 'src/components/Box';
 import ResponsiveText from 'src/components/ResponsiveText';
 import theme from 'src/styleguide/theme';
+import { YOUTUBE_VIDEO_URL } from './constants';
 
 const HowItWorks = () => {
 	return (
@@ -40,7 +41,7 @@ const HowItWorks = () => {
 					} ; */
 					`}
 					borderRadius="12px"
-					src="https://www.youtube.com/embed/SSo_EIwHSd4"
+					src={YOUTUBE_VIDEO_URL}
 					title="YouTube video player"
 					frameBorder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

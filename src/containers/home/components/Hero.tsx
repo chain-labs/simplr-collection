@@ -56,12 +56,14 @@ const Hero = () => {
 					<ResponsiveText
 						mob="h2"
 						tab="h1"
-						desk="headline"
-						text="Create and launch cost effective NFT Collections"
+						desk="h1"
+						text="Simplified platform for creators to launch NFT collections quickly and economically."
 						color="simply-blue"
 						textAlign="center"
 						maxWidth={{ mobS: '27rem', tabS: '50rem', deskM: '80rem' }}
 						id="hero-headline"
+						lineHeight="120%"
+						mb="2%"
 					/>
 					<Text as="b2" maxWidth={{ mobS: '25rem', tabS: '53rem' }} textAlign="center" id="hero-subtext">
 						A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without
@@ -81,7 +83,15 @@ const Hero = () => {
 							mb={{ mobS: 'mm', tabS: 'ws' }}
 							className="hero-cta-l"
 						>
-							<Text as="h4">Enter Waitlist</Text>
+							<Box
+								as="a"
+								href={
+									'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform'
+								}
+								target="_blank"
+							>
+								<Text as="h4">Enter Waitlist</Text>
+							</Box>
 						</ButtonComp>
 						<ResponsiveImage
 							className="hero-image"
