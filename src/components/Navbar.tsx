@@ -11,6 +11,8 @@ import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import ResponsiveText from './ResponsiveText';
 import { DISCORD_INVITE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
+import LogoMob from '../svgs/Logo_mobile.svg';
+import LogoDesk from '../svgs/Logo_desktop.svg';
 
 const NavLink = ({ href, text, closeDrawer }) => {
 	return (
@@ -84,7 +86,8 @@ const Navbar = () => {
 					>
 						<Box>
 							<Box width="100%" py="ml" px="mxl" row between>
-								<Box as="img" src="/static/images/mobile/logo.png" />
+								{/* <Box as="img" src="/static/images/mobile/logo.png" /> */}
+								<LogoMob />
 								<Box onClick={() => closeDrawer()}>
 									<X size="20" color={theme.colors['simply-blue']} />
 								</Box>
@@ -133,19 +136,9 @@ const Navbar = () => {
 					<Box bg="simply-blue" width="100%" height="0.3rem" my="mxxs" />
 					<Box bg="simply-blue" width="100%" height="0.3rem" />
 				</Box>
-				<ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" />
+				{/* <ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" /> */}
+				<LogoDesk />
 				<Box row alignItems="center" height="48px">
-					<Text
-						as="h5"
-						cursor="pointer"
-						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
-						display={{ mobS: 'none', tabS: 'block' }}
-						px="ms"
-						mr="mxxl"
-						onClick={() => scrollIntoView('features')}
-					>
-						Features
-					</Text>
 					<Text
 						as="h5"
 						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
@@ -156,6 +149,17 @@ const Navbar = () => {
 						onClick={() => scrollIntoView('how')}
 					>
 						How it Works
+					</Text>
+					<Text
+						as="h5"
+						cursor="pointer"
+						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
+						display={{ mobS: 'none', tabS: 'block' }}
+						px="ms"
+						mr="mxxl"
+						onClick={() => scrollIntoView('features')}
+					>
+						Features
 					</Text>
 					<Link href="#roadmap" as="/">
 						<Text
@@ -170,9 +174,15 @@ const Navbar = () => {
 							Roadmap
 						</Text>
 					</Link>
-					{/* <ButtonComp bg="primary" height="48px" px="mxxxl">
-						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
-					</ButtonComp> */}
+					<Box
+						as="a"
+						href={'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform'}
+						target="_blank"
+					>
+						<ButtonComp bg="primary" height="48px" px="mxxxl">
+							<ResponsiveText mob="h4" tab="h6" desk="h5" text="Enter Waitlist" />
+						</ButtonComp>
+					</Box>
 				</Box>
 			</Box>
 		</Box>

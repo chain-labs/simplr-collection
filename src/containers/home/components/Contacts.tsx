@@ -47,7 +47,9 @@ const Contacts = () => {
 						justifyContent={{ mobS: 'center', tabS: 'unset' }}
 					>
 						<ButtonComp bg="tertiary" height="48px" py="1.35rem" px="8.65rem" mt="mxxxl" mx="auto">
-							<Text as="h5">Join Discord</Text>
+							<Text as="h5" textAlign="center">
+								Join Discord
+							</Text>
 						</ButtonComp>
 					</Box>
 				</Box>
