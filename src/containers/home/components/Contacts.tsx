@@ -3,6 +3,7 @@ import Box from 'src/components/Box';
 import ButtonComp from 'src/components/Button';
 import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
+import { DISCORD_INVITE } from './constants';
 
 const Contacts = () => {
 	return (
@@ -40,13 +41,8 @@ const Contacts = () => {
 						We are always actively helping out our Creators on our Discord. Join in and share your problems. We’ve got
 						your back.
 					</Text>
-					<Box
-						as="a"
-						href=""
-						display={{ mobS: 'flex', tabS: 'block' }}
-						justifyContent={{ mobS: 'center', tabS: 'unset' }}
-					>
-						<ButtonComp bg="tertiary" height="48px" py="1.35rem" px="8.65rem" mt="mxxxl" mx="auto">
+					<Box as="a" href={DISCORD_INVITE} display="flex" justifyContent={{ mobS: 'center', tabS: 'flex-start' }}>
+						<ButtonComp bg="tertiary" height="48px" px="8.65rem" mt="mxxxl">
 							<Text as="h5">Join Discord</Text>
 						</ButtonComp>
 					</Box>
