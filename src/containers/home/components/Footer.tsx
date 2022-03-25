@@ -5,7 +5,7 @@ import { InstagramFill, DiscordFill, TwitterFill } from 'akar-icons';
 import Text from 'src/components/Text';
 import theme from 'src/styleguide/theme';
 import scrollIntoView from 'src/utils/scrollIntoView';
-import { DISCORD_INVITE, TWITTER_HANDLE } from './constants';
+import { DISCORD_INVITE, INSTAGRAM_HANDLE, TWITTER_HANDLE } from './constants';
 
 const Footer = () => {
 	return (
@@ -76,7 +76,16 @@ const Footer = () => {
 					alignItems={{ mobS: 'flex-start', tabS: 'center' }}
 					mt={{ mobS: 'mxl', tabS: '0' }}
 				>
-					<Box row center mr="mm" mb={{ mobS: 'ms', tabS: '0' }} cursor="pointer">
+					<Box
+						row
+						center
+						mr="mm"
+						mb={{ mobS: 'ms', tabS: '0' }}
+						cursor="pointer"
+						as="a"
+						href={INSTAGRAM_HANDLE}
+						target="_blank"
+					>
 						<InstagramFill strokeWidth={2} size={18} color={theme.colors['simply-blue']} />
 						<Text as="b1" color="simply-blue" ml="mxs" display={{ mobS: 'block', tabS: 'none', deskM: 'block' }}>
 							Instagram

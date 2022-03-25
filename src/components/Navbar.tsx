@@ -10,7 +10,7 @@ import { ArrowRight, X } from 'phosphor-react';
 import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import ResponsiveText from './ResponsiveText';
-import { DISCORD_INVITE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
+import { DISCORD_INVITE, INSTAGRAM_HANDLE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
 import LogoMob from '../svgs/Logo_mobile.svg';
 import LogoDesk from '../svgs/Logo_desktop.svg';
 
@@ -100,7 +100,7 @@ const Navbar = () => {
 						</Box>
 						<Box>
 							<Box pl="mxxxl" pb="mxl" borderBottom={`1px solid ${theme.colors['blue-10']}`}>
-								<Box row alignItems="center">
+								<Box as="a" href={INSTAGRAM_HANDLE} target="_blank" row alignItems="center">
 									<InstagramFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Instagram
