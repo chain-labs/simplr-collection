@@ -8,7 +8,7 @@ import { roadmapArray } from './utils';
 
 const Roadmap = () => {
 	return (
-		<Box pb="wxxl" id="roadmap">
+		<Box pb="wxxl">
 			<ResponsiveText
 				desk="h1"
 				tab="h2"
@@ -18,7 +18,7 @@ const Roadmap = () => {
 				mt="wxs"
 				text="What’s in the Future"
 			/>
-			<Box>
+			<Box id="rm">
 				<Text as="b3" textAlign="center" mx="auto" maxWidth={{ mobS: '25rem', tabS: '57rem' }}>
 					We make promises that we know we can deliver. Here’s the roadmap of what the future holds for Simplr
 					Collection.

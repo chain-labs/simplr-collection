@@ -132,7 +132,8 @@ const Features = () => {
 			column
 			center
 		>
-			<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }} id="features">
+			<Box id="feature" />
+			<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }}>
 				Game Changing Features
 			</Text>
 			<Text

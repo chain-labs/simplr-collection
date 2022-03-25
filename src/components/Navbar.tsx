@@ -1,15 +1,11 @@
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import theme from 'src/styleguide/theme';
 import Box from './Box';
-import ButtonComp from './Button';
-import ResponsiveImage from './ResponsiveImage';
 import Text from './Text';
 import { gsap } from 'gsap';
 import { ArrowRight, X } from 'phosphor-react';
 import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
-import ResponsiveText from './ResponsiveText';
 import { DISCORD_INVITE, INSTAGRAM_HANDLE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
 import LogoMob from '../svgs/Logo_mobile.svg';
 import LogoDesk from '../svgs/Logo_desktop.svg';
@@ -93,9 +89,9 @@ const Navbar = () => {
 								</Box>
 							</Box>
 							<Box borderTop={`1px solid ${theme.colors['blue-10']}`}>
-								<NavLink href="features" text="Features" closeDrawer={closeDrawer} />
+								<NavLink href="feature" text="Features" closeDrawer={closeDrawer} />
 								<NavLink href="how" text="How it Works" closeDrawer={closeDrawer} />
-								<NavLink href="roadmap" text="Roadmap" closeDrawer={closeDrawer} />
+								<NavLink href="rm" text="Roadmap" closeDrawer={closeDrawer} />
 							</Box>
 						</Box>
 						<Box>
@@ -154,37 +150,29 @@ const Navbar = () => {
 					</Text>
 					<Text
 						as="h5"
-						cursor="pointer"
-						color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
+						color="simply-blue"
 						display={{ mobS: 'none', tabS: 'block' }}
 						px="ms"
 						mr="mxxl"
-						onClick={() => scrollIntoView('features')}
+						cursor="pointer"
+						onClick={() => scrollIntoView('feature')}
 					>
 						Features
 					</Text>
-					<Link href="#roadmap" as="/">
-						<Text
-							as="h5"
-							color={{ tabS: 'simply-gray', deskM: 'simply-blue' }}
-							display={{ mobS: 'none', tabS: 'block' }}
-							px="ms"
-							mr="mxxl"
-							cursor="pointer"
-							onClick={() => scrollIntoView('roadmap')}
-						>
-							Roadmap
-						</Text>
-					</Link>
-					<Box
-						as="a"
-						href={'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform'}
-						target="_blank"
+					<Text
+						as="h5"
+						color="simply-blue"
+						display={{ mobS: 'none', tabS: 'block' }}
+						px="ms"
+						mr="mxxl"
+						cursor="pointer"
+						onClick={() => scrollIntoView('rm')}
 					>
-						<ButtonComp bg="primary" height="48px" px="mxxxl">
-							<ResponsiveText mob="h4" tab="h6" desk="h5" text="Enter Waitlist" />
-						</ButtonComp>
-					</Box>
+						Roadmap
+					</Text>
+					{/* <ButtonComp bg="primary" height="48px" px="mxxxl">
+						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
+					</ButtonComp> */}
 				</Box>
 			</Box>
 		</Box>
