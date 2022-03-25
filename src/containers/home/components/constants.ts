@@ -1,3 +1,7 @@
+export const TWITTER_HANDLE = 'https://twitter.com/simplrdao';
+export const DISCORD_INVITE = 'https://dsc.gg/simplr';
+export const INSTAGRAM_HANDLE = '';
+
 export const SYSTEM_LIST = [
 	{
 		title: 'Simplr Collection',

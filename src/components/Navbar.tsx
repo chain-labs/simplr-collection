@@ -10,6 +10,7 @@ import { ArrowRight, X } from 'phosphor-react';
 import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import ResponsiveText from './ResponsiveText';
+import { DISCORD_INVITE, TWITTER_HANDLE } from 'src/containers/home/components/constants';
 
 const NavLink = ({ href, text, closeDrawer }) => {
 	return (
@@ -18,8 +19,6 @@ const NavLink = ({ href, text, closeDrawer }) => {
 			py="ms"
 			pl="mxxxl"
 			onClick={() => {
-				console.log({ href });
-
 				scrollIntoView(href);
 				closeDrawer();
 			}}
@@ -104,13 +103,13 @@ const Navbar = () => {
 										Follow us on Instagram
 									</Text>
 								</Box>
-								<Box row alignItems="center" mt="ms">
+								<Box as="a" href={DISCORD_INVITE} target="_blank" row alignItems="center" mt="ms">
 									<DiscordFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Join our Discord
 									</Text>
 								</Box>
-								<Box row alignItems="center" mt="ms">
+								<Box as="a" href={TWITTER_HANDLE} target="_blank" row alignItems="center" mt="ms">
 									<TwitterFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Twitter
@@ -135,7 +134,7 @@ const Navbar = () => {
 					<Box bg="simply-blue" width="100%" height="0.3rem" />
 				</Box>
 				<ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" />
-				<Box row alignItems="center">
+				<Box row alignItems="center" height="48px">
 					<Text
 						as="h5"
 						cursor="pointer"
@@ -171,9 +170,9 @@ const Navbar = () => {
 							Roadmap
 						</Text>
 					</Link>
-					<ButtonComp bg="primary" height="48px" px="mxxxl">
+					{/* <ButtonComp bg="primary" height="48px" px="mxxxl">
 						<ResponsiveText mob="h4" tab="h6" desk="h5" text="Early Access" />
-					</ButtonComp>
+					</ButtonComp> */}
 				</Box>
 			</Box>
 		</Box>
