@@ -74,10 +74,6 @@ const Hero = () => {
 						flexDirection={{ mobS: 'column-reverse', tabS: 'column' }}
 						alignItems="center"
 						mt={{ mobS: 'ml' }}
-						as="a"
-						href={'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform'}
-						target="_blank"
-						textDecoration="none"
 					>
 						<ButtonComp
 							bg="primary"
@@ -87,7 +83,15 @@ const Hero = () => {
 							mb={{ mobS: 'mm', tabS: 'ws' }}
 							className="hero-cta-l"
 						>
-							<Text as="h4">Enter Waitlist</Text>
+							<Box
+								as="a"
+								href={
+									'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform'
+								}
+								target="_blank"
+							>
+								<Text as="h4">Enter Waitlist</Text>
+							</Box>
 						</ButtonComp>
 						<ResponsiveImage
 							className="hero-image"
