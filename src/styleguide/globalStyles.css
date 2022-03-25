@@ -101,7 +101,7 @@ a:hover {
     position: absolute;
     height: 0px;
     width: 0px;
-    top: 35%;
+    /* top: 35%; */
     left: -29px; 
     border-width: 15px;
     border-color: transparent #E0EAFF transparent transparent;
@@ -118,18 +118,18 @@ a:hover {
 }
 @media screen and (max-width: 750px) {
 	.pointedLeftBox {
-		right: 80px;
+		right: 90px;
     width:120px;
 	}
 	.pointedRightBox {
-		right: -105px;
+		right: -115px;
     width:120px;
 	}
 	.pointedLeftBox::before {
-		top: 20%
+		top: 36%
 	}
 	.pointedRightBox::before {
-		
+		top: 30%
 	}
 }
 @media screen and (min-width:750px) and( max-width: 1024px) {
@@ -148,7 +148,7 @@ a:hover {
     height: 0px;
     width: 0px;
 	left:100%;
-	top: 38%;
+	/* top: 38%; */
     border-width: 15px;
     border-color: transparent transparent transparent #E0EAFF;
     border-style: solid;

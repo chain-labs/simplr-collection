@@ -60,7 +60,7 @@ const Hero = () => {
 						text="Simplified platform for creators to launch NFT collections quickly and economically."
 						color="simply-blue"
 						textAlign="center"
-						maxWidth={{ mobS: '27rem', tabS: '50rem', deskM: '59rem' }}
+						maxWidth={{ mobS: '27rem', tabS: '50rem', deskM: '80rem' }}
 						id="hero-headline"
 						lineHeight="120%"
 						mb="2%"

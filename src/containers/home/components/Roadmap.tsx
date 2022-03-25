@@ -42,7 +42,7 @@ const Roadmap = () => {
 								headText={array.headText}
 								position={array.position}
 								top={array.top}
-								arrowTop="35%"
+								arrowTop={array.arrowTop}
 								odd={roadmapArray.indexOf(array) % 2 === 0 ? false : true}
 							/>
 						);
