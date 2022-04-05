@@ -39,6 +39,7 @@ const MyApp = ({ Component, pageProps }) => {
 		<>
 			<Head>
 				<title>Simplr Collection</title>
+				<meta name="keywords" content="Blockchain,NFT,Cryptocurrency" />
 				<link rel="shortcut icon" href="/favicon.png" />
 				{toBoolean(process.env.NEXT_PUBLIC_PRODUCTION) && (
 					<script

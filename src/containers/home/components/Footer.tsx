@@ -23,8 +23,19 @@ const Footer = () => {
 						mobile="/static/images/mobile/logo_footer.png"
 						desk="/static/images/desktop/logo_footer.png"
 						tab="/static/images/tab/logo_footer.png"
+						width="163px"
+						height="47px"
+						// width={{ mobS: '86px', deskM: '163px' }}
+						// height={{ mobS: '25px', deskM: '47px' }}
 					/>
 				</Box>
+				{/* <Box>
+					<ResponsiveImage
+						mobile="/static/images/mobile/logo_footer.png"
+						desk="/static/images/desktop/logo_footer.png"
+						tab="/static/images/tab/logo_footer.png"
+					/>
+				</Box> */}
 				<Box display="flex" flexDirection={{ mobS: 'column', tabS: 'row' }} mt={{ mobS: 'mxl', tabS: '0' }}>
 					<Text
 						as="h6"

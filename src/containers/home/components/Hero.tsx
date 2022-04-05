@@ -7,6 +7,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ResponsiveText from 'src/components/ResponsiveText';
 import { WAITLIST_FORM_URL } from './constants';
+import logo from './../../../../public/static/images/desktop/about.png';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +82,7 @@ const Hero = () => {
 							bg="primary"
 							px="wxs"
 							height="48px"
-							width={{ mobS: '100%', tabS: 'unset' }}
+							width={{ mobS: '85%', tabS: 'unset' }}
 							mb={{ mobS: 'mm', tabS: 'ws' }}
 							className="hero-cta-l"
 						>
@@ -88,12 +90,16 @@ const Hero = () => {
 								<Text as="h4">Enter Waitlist</Text>
 							</Box>
 						</ButtonComp>
-						<ResponsiveImage
-							className="hero-image"
-							mobile="/static/images/mobile/hero_image.png"
-							tab="/static/images/tab/hero_image.png"
-							desk="/static/images/desktop/hero_image.png"
-						/>
+						<Box center mx={{ mobS: 'mxl', tabS: '0' }}>
+							<ResponsiveImage
+								className="hero-image"
+								mobile="/static/images/mobile/hero_image.png"
+								tab="/static/images/tab/hero_image.png"
+								desk="/static/images/desktop/hero_image.png"
+								width="844px"
+								height="590px"
+							/>
+						</Box>
 					</Box>
 				</Box>
 				<Box column center mt={{ mobS: 'wm', tabS: 'wxs', deskM: 'wxl' }}>
@@ -137,12 +143,16 @@ const Hero = () => {
 							maxWidth={{ mobS: '24rem', tabS: 'unset' }}
 							mt="ml"
 						/>
-						<ResponsiveImage
-							className="info-image"
-							mobile="/static/images/mobile/about.png"
-							tab="/static/images/tab/about.png"
-							desk="/static/images/desktop/about.png"
-						/>
+						<Box center mx={{ mobS: 'mxxl', tabS: '0' }}>
+							<ResponsiveImage
+								className="info-image"
+								mobile="/static/images/desktop/about.png"
+								tab="/static/images/tab/about.png"
+								desk="/static/images/desktop/about.png"
+								width="548px"
+								height="309px"
+							/>
+						</Box>
 					</Box>
 				</Box>
 			</Box>

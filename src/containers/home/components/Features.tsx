@@ -8,7 +8,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { random } from './utils';
 import theme from 'src/styleguide/theme';
 import { FEATURES } from './constants';
-
+import { layout } from 'styled-system';
+import Image from 'next/image';
+import logo from './../../../../public/static/images/desktop/about.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const FeatureCard = ({ image, title, info, className }) => {
@@ -64,6 +66,7 @@ const FeatureCard = ({ image, title, info, className }) => {
 				tab={`/static/images/tab/${image}`}
 				desk={`/static/images/desktop/${image}`}
 			/>
+			{/* <Image src={`/static/images/desktop/${image}`} width="100%" height="100%" /> */}
 			<Box ml={{ mobS: '0', tabS: 'mxxl' }}>
 				<Text as="h3" color="simply-blue" display={{ mobS: 'none', tabS: 'block' }}>
 					{title}

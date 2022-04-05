@@ -50,8 +50,10 @@ const Contacts = () => {
 				<Box>
 					<ResponsiveImage
 						tab="/static/images/tab/contact.png"
-						desk="static/images/desktop/contact.png"
-						mobile="static/images/mobile/contact.png"
+						desk="/static/images/desktop/contact.png"
+						mobile="/static/images/mobile/contact.png"
+						width="709px"
+						height="398px"
 					/>
 				</Box>
 			</Box>
