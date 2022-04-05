@@ -9,10 +9,17 @@ import Image from 'next/image';
 
 import heroImage from 'public/static/images/desktop/hero_image.png';
 import infoImage from 'public/static/images/desktop/about.png';
+import { heroAnimations } from './animations';
+import { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+		heroAnimations();
+	}, []);
+
 	return (
 		<Box display="flex" justifyContent="center" width="100vw">
 			<Box

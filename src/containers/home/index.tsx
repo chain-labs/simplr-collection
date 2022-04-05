@@ -1,5 +1,5 @@
-import Box from 'src/components/Box';
 import dynamic from 'next/dynamic';
+import Box from 'src/components/Box';
 const Contacts = dynamic(() => import('./components/Contacts'));
 const Features = dynamic(() => import('./components/Features'));
 const Footer = dynamic(() => import('./components/Footer'));
