@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import React from 'react';
 import Box from 'src/components/Box';
 import ButtonComp from 'src/components/Button';
-import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
 import { DISCORD_INVITE } from './constants';
+
+import contactImage from 'public/static/images/desktop/contact.png';
 
 const Contacts = () => {
 	return (
@@ -48,13 +50,7 @@ const Contacts = () => {
 					</Box>
 				</Box>
 				<Box>
-					<ResponsiveImage
-						tab="/static/images/tab/contact.png"
-						desk="/static/images/desktop/contact.png"
-						mobile="/static/images/mobile/contact.png"
-						width="709px"
-						height="398px"
-					/>
+					<Image src={contactImage} objectFit="cover" />
 				</Box>
 			</Box>
 		</Box>

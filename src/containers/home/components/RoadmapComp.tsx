@@ -14,7 +14,7 @@ interface props {
 	top: object;
 }
 
-const RoadmapComp = ({ status, odd, text, headText, position, arrowTop, top }: props) => {
+const RoadmapComp = ({ status, odd, text, headText, position, top }: props) => {
 	return (
 		<Box mt={top}>
 			<Box width="90%" display="flex" alignItems="center" justifyContent="space-between">
