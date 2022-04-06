@@ -1,51 +1,18 @@
-import { useEffect } from 'react';
 import Box from 'src/components/Box';
 import ButtonComp from 'src/components/Button';
-import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ResponsiveText from 'src/components/ResponsiveText';
 import { WAITLIST_FORM_URL } from './constants';
+import Image from 'next/image';
+
+import heroImage from 'public/static/images/desktop/hero_image.png';
+import infoImage from 'public/static/images/desktop/about.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-	useEffect(() => {
-		gsap.fromTo('#hero-headline', { autoAlpha: 0, y: '-20%' }, { autoAlpha: 1, y: '0%', duration: 0.9 });
-		gsap.fromTo('#hero-subtext', { autoAlpha: 0, y: '-20%' }, { autoAlpha: 1, y: '0%', delay: 0.3, duration: 0.6 });
-		gsap.fromTo('.hero-cta-l', { autoAlpha: 0, x: '-5%' }, { autoAlpha: 1, x: '0%', delay: 0.6, duration: 0.3 });
-		gsap.fromTo('.hero-cta-r', { autoAlpha: 0, x: '5%' }, { autoAlpha: 1, x: '0%', delay: 0.6, duration: 0.3 });
-		gsap.fromTo('.hero-image', { autoAlpha: 0 }, { autoAlpha: 1, delay: 1.2, duration: 0.9 });
-
-		gsap.fromTo(
-			'.info-image',
-			{ autoAlpha: 0 },
-			{
-				autoAlpha: 1,
-				duration: 1.5,
-				scrollTrigger: {
-					trigger: '.info-image',
-					start: 'top 60%',
-					end: '200% 100%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'.info-text',
-			{ autoAlpha: 0, x: '-5%' },
-			{
-				autoAlpha: 1,
-				x: '0%',
-				duration: 0.9,
-				scrollTrigger: {
-					trigger: '.info-image',
-					start: 'top 50%',
-					end: '200% 100%',
-				},
-			}
-		);
-	}, []);
 	return (
 		<Box display="flex" justifyContent="center" width="100vw">
 			<Box
@@ -80,7 +47,7 @@ const Hero = () => {
 							bg="primary"
 							px="wxs"
 							height="48px"
-							width={{ mobS: '100%', tabS: 'unset' }}
+							width={{ mobS: '85%', tabS: 'unset' }}
 							mb={{ mobS: 'mm', tabS: 'ws' }}
 							className="hero-cta-l"
 						>
@@ -88,12 +55,9 @@ const Hero = () => {
 								<Text as="h4">Enter Waitlist</Text>
 							</Box>
 						</ButtonComp>
-						<ResponsiveImage
-							className="hero-image"
-							mobile="/static/images/mobile/hero_image.png"
-							tab="/static/images/tab/hero_image.png"
-							desk="/static/images/desktop/hero_image.png"
-						/>
+						<Box center width={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }} position="relative">
+							<Image src={heroImage} objectFit="cover" className="hero-image" />
+						</Box>
 					</Box>
 				</Box>
 				<Box column center mt={{ mobS: 'wm', tabS: 'wxs', deskM: 'wxl' }}>
@@ -137,12 +101,9 @@ const Hero = () => {
 							maxWidth={{ mobS: '24rem', tabS: 'unset' }}
 							mt="ml"
 						/>
-						<ResponsiveImage
-							className="info-image"
-							mobile="/static/images/mobile/about.png"
-							tab="/static/images/tab/about.png"
-							desk="/static/images/desktop/about.png"
-						/>
+						<Box center>
+							<Image className="info-image" src={infoImage} objectFit="cover" />
+						</Box>
 					</Box>
 				</Box>
 			</Box>

@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://api.fontshare.com/css?f[]=switzer@300,400,500,600,700&display=swap');
-@import url('https://fontlibrary.org//face/open-sauce-one');
+
+
+@font-face {
+	font-family: 'OpenSauceOneRegular';
+	font-style: normal;
+	font-weight: 400;
+	src: local('/static/fonts/OpenSauceOneRegular.ttf'), url(https://fontlibrary.org//face/open-sauce-one) format('ttf');
+	font-display: swap;
+  }
 
 
 body,
@@ -10,6 +18,7 @@ html {
 	font-size: 62.5%;
 	font-family: 'Switzer', sans-serif;
 	font-style: normal;
+	font-display: swap;
 }
 
 body {

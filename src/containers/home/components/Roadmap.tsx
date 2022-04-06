@@ -1,4 +1,3 @@
-import { Check } from 'phosphor-react';
 import React from 'react';
 import Box from 'src/components/Box';
 import ResponsiveText from 'src/components/ResponsiveText';

@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
 import Box from 'src/components/Box';
-import ResponsiveImage from 'src/components/ResponsiveImage';
 import ResponsiveText from 'src/components/ResponsiveText';
 import Text from 'src/components/Text';
 import { SYSTEM_LIST } from './constants';

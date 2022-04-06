@@ -1,12 +1,13 @@
 import Box from 'src/components/Box';
-import Contacts from './components/Contacts';
-import Features from './components/Features';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import HowItWorks from './components/HowItWorks';
-import CollectionTypes from './components/CollectionTypes';
-import System from './components/Systems';
-import Roadmap from './components/Roadmap';
+import dynamic from 'next/dynamic';
+const Contacts = dynamic(() => import('./components/Contacts'));
+const Features = dynamic(() => import('./components/Features'));
+const Footer = dynamic(() => import('./components/Footer'));
+const Hero = dynamic(() => import('./components/Hero'));
+const HowItWorks = dynamic(() => import('./components/HowItWorks'));
+const CollectionTypes = dynamic(() => import('./components/CollectionTypes'));
+const System = dynamic(() => import('./components/Systems'));
+const Roadmap = dynamic(() => import('./components/Roadmap'));
 
 const HomePage = () => {
 	return (

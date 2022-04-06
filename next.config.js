@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const withTM = require('next-transpile-modules')(['gsap']);
 const withPlugins = require('next-compose-plugins');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+const ANALYZE = process.env.ANALYZE;
 
 const nextConfig = {
 	images: {
@@ -10,7 +13,16 @@ const nextConfig = {
 module.exports = withPlugins([
 	[
 		withTM({
-			webpack(config) {
+			webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+				if (ANALYZE) {
+					config.plugins.push(
+						new BundleAnalyzerPlugin({
+							analyzerMode: 'server',
+							analyzerPort: isServer ? 8888 : 8889,
+							openAnalyzer: true,
+						})
+					);
+				}
 				config.module.rules.push({
 					test: /\.(jpg|gif|svg|eot|ttf|woff|woff2)$/,
 					use: ['@svgr/webpack'],
