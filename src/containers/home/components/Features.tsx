@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Box from 'src/components/Box';
-import ResponsiveImage from 'src/components/ResponsiveImage';
 import Text from 'src/components/Text';
 
 import { gsap } from 'gsap';
@@ -8,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { random } from './utils';
 import theme from 'src/styleguide/theme';
 import { FEATURES } from './constants';
-
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const FeatureCard = ({ image, title, info, className }) => {
@@ -59,11 +58,14 @@ const FeatureCard = ({ image, title, info, className }) => {
 			width={{ mobS: '32rem', tabS: 'unset' }}
 			mb="ml"
 		>
-			<ResponsiveImage
+			{/* <ResponsiveImage
 				mobile={`/static/images/mobile/${image}`}
 				tab={`/static/images/tab/${image}`}
 				desk={`/static/images/desktop/${image}`}
-			/>
+			/> */}
+			<Box minWidth="10.2rem">
+				<Image src={image} objectFit="cover" />
+			</Box>
 			<Box ml={{ mobS: '0', tabS: 'mxxl' }}>
 				<Text as="h3" color="simply-blue" display={{ mobS: 'none', tabS: 'block' }}>
 					{title}
