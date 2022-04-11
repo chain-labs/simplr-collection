@@ -18,6 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
 					content="A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without any hassle."
 				/>
 				<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+				<meta name="google-site-verification" content="BX0Vo3GESWeUxAbuYWlXYLiEksTkOtIuT_DDs_8Y6m4" />
 				<link rel="shortcut icon" href="/favicon.png" />
 				{CLARITY_ID && (
 					<script
