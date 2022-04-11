@@ -6,6 +6,8 @@ import Text from 'src/components/Text';
 import theme from 'src/styleguide/theme';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import { DISCORD_INVITE, INSTAGRAM_HANDLE, TWITTER_HANDLE } from './constants';
+import logoFooter from 'public/static/images/desktop/logo_footer.png';
+import Image from 'next/image';
 
 const Footer = () => {
 	return (
@@ -19,7 +21,7 @@ const Footer = () => {
 				pb="mxl"
 			>
 				<Box>
-					<ResponsiveImage
+					{/* <ResponsiveImage
 						mobile="/static/images/mobile/logo_footer.png"
 						desk="/static/images/desktop/logo_footer.png"
 						tab="/static/images/tab/logo_footer.png"
@@ -27,7 +29,8 @@ const Footer = () => {
 						height="47px"
 						// width={{ mobS: '86px', deskM: '163px' }}
 						// height={{ mobS: '25px', deskM: '47px' }}
-					/>
+					/> */}
+					<Image src={logoFooter} objectFit="cover" alt="logo-image-footer" />
 				</Box>
 				{/* <Box>
 					<ResponsiveImage

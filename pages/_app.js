@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { debounce } from 'lodash';
 import Head from 'next/head';
 
 import theme from 'styleguide/theme';
@@ -7,16 +5,21 @@ import theme from 'styleguide/theme';
 import 'styleguide/globalStyles.css';
 import { ThemeProvider } from 'styled-components';
 import Navbar from 'src/components/Navbar';
-import { toBoolean } from 'src/utils/toBoolean';
+import { CLARITY_ID } from 'src/containers/home/components/constants';
 
 const MyApp = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Head>
 				<title>Simplr Collection</title>
-				<meta name="keywords" content="Blockchain,NFT,Cryptocurrency" />
+				<meta name="keywords" content="Blockchain,NFT,Cryptocurrency,Simplr,SimplrCollection,Chainlabs" />
+				<meta
+					name="description"
+					content="A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without any hassle."
+				/>
+				<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 				<link rel="shortcut icon" href="/favicon.png" />
-				{toBoolean(process.env.NEXT_PUBLIC_PRODUCTION) && (
+				{CLARITY_ID && (
 					<script
 						type="text/javascript"
 						dangerouslySetInnerHTML={{
@@ -25,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
 							c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
 							t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 							y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-						})(window, document, "clarity", "script", "b6ih4vqkel");`,
+						})(window, document, "clarity", "script", ${CLARITY_ID});`,
 						}}
 					/>
 				)}

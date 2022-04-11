@@ -141,7 +141,7 @@ const Navbar = () => {
 				</Box>
 				{/* <ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" /> */}
 				<Box>
-					<LogoDesk />
+					<LogoDesk alt="logo-image" />
 				</Box>
 				<Box row alignItems="center" height="48px">
 					<Text

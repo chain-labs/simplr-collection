@@ -64,7 +64,7 @@ const FeatureCard = ({ image, title, info, className }) => {
 				desk={`/static/images/desktop/${image}`}
 			/> */}
 			<Box minWidth="10.2rem">
-				<Image src={image} objectFit="cover" />
+				<Image src={image} objectFit="cover" alt="feature-image" />
 			</Box>
 			<Box ml={{ mobS: '0', tabS: 'mxxl' }}>
 				<Text as="h3" color="simply-blue" display={{ mobS: 'none', tabS: 'block' }}>
