@@ -40,7 +40,6 @@ const ButtonComp = ({ bg, disable, height, children, ...restProps }: ButtonProps
 		<Box
 			as="button"
 			backgroundColor={!disable ? buttonColour : 'simply-white'}
-			//@ts-expect-error-button
 			color={!disable ? fontColor(bg) : 'disable-black'}
 			border={!disable ? bColor : '1px solid rgba(140, 140, 161, 0.2)'}
 			borderRadius="8px"

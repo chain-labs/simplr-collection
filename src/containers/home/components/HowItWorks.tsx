@@ -23,7 +23,6 @@ const HowItWorks = () => {
 				mt={{ mobS: 'ms', tabS: 'mm' }}
 				mb="mxxxl"
 			/>
-			{/* // @ts-expect-error frame-level-media-query */}
 			<Box
 				id="how"
 				width={{ mobS: '28.5rem', tabS: '75rem', deskM: '108rem' }}
