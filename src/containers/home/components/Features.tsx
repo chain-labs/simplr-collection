@@ -76,49 +76,49 @@ const FeatureCard = ({ image, title, info, className }) => {
 };
 
 const Features = () => {
-	useEffect(() => {
-		gsap.fromTo(
-			'.feat-title',
-			{ y: '-10%', autoAlpha: '0' },
-			{
-				y: '0%',
-				autoAlpha: '1',
-				duration: 1,
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: 'top 50%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'.feat-info',
-			{ y: '-10%', autoAlpha: '0' },
-			{
-				y: '0%',
-				autoAlpha: '1',
-				duration: 1,
-				delay: 0.5,
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: 'top 50%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'.feat-info',
-			{ y: '-10%', autoAlpha: '0' },
-			{
-				y: '0%',
-				autoAlpha: '1',
-				duration: 1,
-				delay: 0.5,
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: 'top 50%',
-				},
-			}
-		);
-	}, []);
+	// useEffect(() => {
+	// 	gsap.fromTo(
+	// 		'.feat-title',
+	// 		{ y: '-10%', autoAlpha: '0' },
+	// 		{
+	// 			y: '0%',
+	// 			autoAlpha: '1',
+	// 			duration: 1,
+	// 			scrollTrigger: {
+	// 				trigger: '.feat-title',
+	// 				start: 'top 50%',
+	// 			},
+	// 		}
+	// 	);
+	// 	gsap.fromTo(
+	// 		'.feat-info',
+	// 		{ y: '-10%', autoAlpha: '0' },
+	// 		{
+	// 			y: '0%',
+	// 			autoAlpha: '1',
+	// 			duration: 1,
+	// 			delay: 0.5,
+	// 			scrollTrigger: {
+	// 				trigger: '.feat-title',
+	// 				start: 'top 50%',
+	// 			},
+	// 		}
+	// 	);
+	// 	gsap.fromTo(
+	// 		'.feat-info',
+	// 		{ y: '-10%', autoAlpha: '0' },
+	// 		{
+	// 			y: '0%',
+	// 			autoAlpha: '1',
+	// 			duration: 1,
+	// 			delay: 0.5,
+	// 			scrollTrigger: {
+	// 				trigger: '.feat-title',
+	// 				start: 'top 50%',
+	// 			},
+	// 		}
+	// 	);
+	// }, []);
 
 	return (
 		<Box
