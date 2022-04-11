@@ -26,7 +26,6 @@
   "dependencies": {
     "@styled-system/prop-types": "^5.1.5",
     "@svgr/webpack": "^6.2.0",
-    "@types/styled-components": "^5.1.11",
     "@types/styled-system": "^5.1.14",
     "akar-icons": "^1.9.14",
     "gsap": "^3.9.1",
