@@ -4,7 +4,7 @@ import Box from './Box';
 import Text from './Text';
 import { gsap } from 'gsap';
 import { ArrowRight, X } from 'phosphor-react';
-import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
+import { InstagramFill as Insta, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
 import {
 	DISCORD_INVITE,
@@ -104,7 +104,7 @@ const Navbar = () => {
 						<Box>
 							<Box pl="mxxxl" pb="mxl" borderBottom={`1px solid ${theme.colors['blue-10']}`}>
 								<Box as="a" href={INSTAGRAM_HANDLE} target="_blank" row alignItems="center">
-									<InstagramFill size="20" color={theme.colors['simply-blue']} />
+									<Insta size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Instagram
 									</Text>
