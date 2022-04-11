@@ -1,9 +1,5 @@
-import { useEffect } from 'react';
-import { debounce } from 'lodash';
 import Head from 'next/head';
-
 import theme from 'styleguide/theme';
-
 import 'styleguide/globalStyles.css';
 import { ThemeProvider } from 'styled-components';
 import Navbar from 'src/components/Navbar';

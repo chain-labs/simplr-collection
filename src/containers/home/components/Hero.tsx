@@ -10,12 +10,12 @@ import Image from 'next/image';
 import heroImage from 'public/static/images/desktop/hero_image.png';
 import infoImage from 'public/static/images/desktop/about.png';
 import { heroAnimations } from './animations';
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-	useEffect(() => {
+	useLayoutEffect(() => {
 		window.scrollTo(0, 0);
 		heroAnimations();
 	}, []);
@@ -62,7 +62,12 @@ const Hero = () => {
 								<Text as="h4">Enter Waitlist</Text>
 							</Box>
 						</ButtonComp>
-						<Box center width={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }} position="relative">
+						<Box
+							center
+							width={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }}
+							position="relative"
+							mb={{ mobS: 'mm', tabS: '0' }}
+						>
 							<Image src={heroImage} objectFit="cover" className="hero-image" />
 						</Box>
 					</Box>

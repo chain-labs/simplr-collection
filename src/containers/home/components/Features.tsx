@@ -1,49 +1,15 @@
 import { useEffect } from 'react';
 import Box from 'src/components/Box';
 import Text from 'src/components/Text';
-
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { random } from './utils';
-import theme from 'src/styleguide/theme';
 import { FEATURES } from './constants';
 import Image from 'next/image';
-gsap.registerPlugin(ScrollTrigger);
+import { featureCardAnimations, featuresAnimations } from './animations';
 
 const FeatureCard = ({ image, title, info, className }) => {
 	useEffect(() => {
-		const width = window.visualViewport.width;
-		const breakpoint = parseInt(theme.breakpoints.deskM.split('px')[0]);
-		const key = parseInt(className[className.length - 1]);
-		if (width >= breakpoint) {
-			gsap.fromTo(
-				`.${className}`,
-				{ autoAlpha: 0 },
-				{
-					autoAlpha: 1,
-					duration: 1,
-					delay: 0.1 * random[key],
-					scrollTrigger: {
-						trigger: '.feat-title',
-						start: `top 20%`,
-					},
-				}
-			);
-		} else {
-			gsap.fromTo(
-				`.${className}`,
-				{ autoAlpha: 0 },
-				{
-					autoAlpha: 1,
-					duration: 1,
-					scrollTrigger: {
-						trigger: '.feat-title',
-						start: `top 20%`,
-					},
-				}
-			);
-		}
+		featureCardAnimations(className);
 	}, []);
+
 	return (
 		<Box
 			className={className}
@@ -83,49 +49,8 @@ const FeatureCard = ({ image, title, info, className }) => {
 
 const Features = () => {
 	useEffect(() => {
-		gsap.fromTo(
-			'.feat-title',
-			{ y: '-10%', autoAlpha: '0' },
-			{
-				y: '0%',
-				autoAlpha: '1',
-				duration: 1,
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: 'top 50%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'.feat-info',
-			{ y: '-10%', autoAlpha: '0' },
-			{
-				y: '0%',
-				autoAlpha: '1',
-				duration: 1,
-				delay: 0.5,
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: 'top 50%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'.feat-info',
-			{ y: '-10%', autoAlpha: '0' },
-			{
-				y: '0%',
-				autoAlpha: '1',
-				duration: 1,
-				delay: 0.5,
-				scrollTrigger: {
-					trigger: '.feat-title',
-					start: 'top 50%',
-				},
-			}
-		);
+		featuresAnimations();
 	}, []);
-
 	return (
 		<Box
 			pt={{ mobS: 'wm', tabS: '5rem' }}
