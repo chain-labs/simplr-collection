@@ -36,6 +36,7 @@ const Roadmap = () => {
 					{roadmapArray?.map((array, index) => {
 						return (
 							<RoadmapComp
+								key={`roadmap-${index}`}
 								status={array.status}
 								text={array.text}
 								headText={array.headText}

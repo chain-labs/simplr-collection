@@ -50,7 +50,7 @@ const Contacts = () => {
 					</Box>
 				</Box>
 				<Box>
-					<Image src={contactImage} objectFit="cover" />
+					<Image src={contactImage} objectFit="cover" alt="contact-image" />
 				</Box>
 			</Box>
 		</Box>

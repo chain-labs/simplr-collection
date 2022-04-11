@@ -5,62 +5,58 @@ import ButtonComp from 'src/components/Button';
 import ResponsiveText from 'src/components/ResponsiveText';
 import Text from 'src/components/Text';
 import theme from 'src/styleguide/theme';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const CollectionTypes = () => {
-	useEffect(() => {
-		gsap.fromTo(
-			'#col-type-headline',
-			{
-				autoAlpha: 0,
-				y: -10,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				duration: 0.9,
-				scrollTrigger: {
-					trigger: '#col-type-headline',
-					start: 'top 50%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'#col-type-text',
-			{
-				autoAlpha: 0,
-				y: -10,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				duration: 0.9,
-				delay: 0.3,
-				scrollTrigger: {
-					trigger: '#col-type-text',
-					start: 'top 50%',
-				},
-			}
-		);
-		gsap.fromTo(
-			'#col-type-cards',
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-				duration: 0.9,
-				delay: 0.6,
-				scrollTrigger: {
-					trigger: '#col-type-cards',
-					start: 'top 50%',
-				},
-			}
-		);
-	}, []);
+	// useEffect(() => {
+	// 	gsap.fromTo(
+	// 		'#col-type-headline',
+	// 		{
+	// 			autoAlpha: 0,
+	// 			y: -10,
+	// 		},
+	// 		{
+	// 			autoAlpha: 1,
+	// 			y: 0,
+	// 			duration: 0.9,
+	// 			scrollTrigger: {
+	// 				trigger: '#col-type-headline',
+	// 				start: 'top 50%',
+	// 			},
+	// 		}
+	// 	);
+	// 	gsap.fromTo(
+	// 		'#col-type-text',
+	// 		{
+	// 			autoAlpha: 0,
+	// 			y: -10,
+	// 		},
+	// 		{
+	// 			autoAlpha: 1,
+	// 			y: 0,
+	// 			duration: 0.9,
+	// 			delay: 0.3,
+	// 			scrollTrigger: {
+	// 				trigger: '#col-type-text',
+	// 				start: 'top 50%',
+	// 			},
+	// 		}
+	// 	);
+	// 	gsap.fromTo(
+	// 		'#col-type-cards',
+	// 		{
+	// 			autoAlpha: 0,
+	// 		},
+	// 		{
+	// 			autoAlpha: 1,
+	// 			duration: 0.9,
+	// 			delay: 0.6,
+	// 			scrollTrigger: {
+	// 				trigger: '#col-type-cards',
+	// 				start: 'top 50%',
+	// 			},
+	// 		}
+	// 	);
+	// }, []);
 
 	return (
 		<Box

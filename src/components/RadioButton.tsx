@@ -13,7 +13,6 @@ interface Props extends BoxProps {
 
 const RadioButton = ({ disabled, value, setValue, ...restProps }: Props): JSX.Element => {
 	return (
-		//@ts-expect-error-box
 		<Box
 			as="button"
 			display="flex"

@@ -56,7 +56,7 @@ const Hero = () => {
 							</Box>
 						</ButtonComp>
 						<Box center width={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }} position="relative">
-							<Image src={heroImage} objectFit="cover" className="hero-image" />
+							<Image src={heroImage} objectFit="cover" className="hero-image" alt="hero-image" />
 						</Box>
 					</Box>
 				</Box>
@@ -102,7 +102,7 @@ const Hero = () => {
 							mt="ml"
 						/>
 						<Box center>
-							<Image className="info-image" src={infoImage} objectFit="cover" />
+							<Image className="info-image" src={infoImage} objectFit="cover" alt="info-image" />
 						</Box>
 					</Box>
 				</Box>

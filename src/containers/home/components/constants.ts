@@ -4,6 +4,7 @@ export const INSTAGRAM_HANDLE = 'https://instagram.com/simplrdao';
 export const YOUTUBE_VIDEO_URL = 'https://www.youtube.com/embed/BtdfahO8NbM';
 export const WAITLIST_FORM_URL =
 	'https://docs.google.com/forms/d/e/1FAIpQLSdza0C0H0Yw73LrVZMTTE1zGHz5akBjyiEOegBkkZZOfrYOig/viewform';
+export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 import gasImage from 'public/static/images/desktop/gas.png';
 import dashboardImage from 'public/static/images/desktop/dashboard.png';

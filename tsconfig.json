@@ -48,7 +48,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/src/style"
-, "pages/_app.js"  ],
+, "pages/_app.js", "src/components/Navbar.jsx", "src/containers/home/components/Footer.jsx"  ],
   "exclude": [
     "node_modules",
     ".next",

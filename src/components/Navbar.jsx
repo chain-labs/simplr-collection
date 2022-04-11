@@ -4,8 +4,8 @@ import Box from './Box';
 import Text from './Text';
 import { gsap } from 'gsap';
 import { ArrowRight, X } from 'phosphor-react';
-import { InstagramFill, TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
+import * as Icons from 'akar-icons';
 import {
 	DISCORD_INVITE,
 	INSTAGRAM_HANDLE,
@@ -104,19 +104,19 @@ const Navbar = () => {
 						<Box>
 							<Box pl="mxxxl" pb="mxl" borderBottom={`1px solid ${theme.colors['blue-10']}`}>
 								<Box as="a" href={INSTAGRAM_HANDLE} target="_blank" row alignItems="center">
-									<InstagramFill size="20" color={theme.colors['simply-blue']} />
+									<Icons.InstagramFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Instagram
 									</Text>
 								</Box>
 								<Box as="a" href={DISCORD_INVITE} target="_blank" row alignItems="center" mt="ms">
-									<DiscordFill size="20" color={theme.colors['simply-blue']} />
+									<Icons.DiscordFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Join our Discord
 									</Text>
 								</Box>
 								<Box as="a" href={TWITTER_HANDLE} target="_blank" row alignItems="center" mt="ms">
-									<TwitterFill size="20" color={theme.colors['simply-blue']} />
+									<Icons.TwitterFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Twitter
 									</Text>
@@ -139,9 +139,8 @@ const Navbar = () => {
 					<Box bg="simply-blue" width="100%" height="0.3rem" my="mxxs" />
 					<Box bg="simply-blue" width="100%" height="0.3rem" />
 				</Box>
-				{/* <ResponsiveImage tab="/static/images/tab/logo.png" desk="/static/images/desktop/logo.png" /> */}
 				<Box>
-					<LogoDesk />
+					<LogoDesk alt="logo-image" />
 				</Box>
 				<Box row alignItems="center" height="48px">
 					<Text
