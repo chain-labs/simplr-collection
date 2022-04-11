@@ -4,8 +4,8 @@ import Box from './Box';
 import Text from './Text';
 import { gsap } from 'gsap';
 import { ArrowRight, X } from 'phosphor-react';
-import { TwitterFill, DiscordFill } from 'akar-icons';
 import scrollIntoView from 'src/utils/scrollIntoView';
+import * as Icons from 'akar-icons';
 import {
 	DISCORD_INVITE,
 	INSTAGRAM_HANDLE,
@@ -103,20 +103,20 @@ const Navbar = () => {
 						</Box>
 						<Box>
 							<Box pl="mxxxl" pb="mxl" borderBottom={`1px solid ${theme.colors['blue-10']}`}>
-								{/* <Box as="a" href={INSTAGRAM_HANDLE} target="_blank" row alignItems="center">
-									<InstagramFill size="20" color={theme.colors['simply-blue']} />
+								<Box as="a" href={INSTAGRAM_HANDLE} target="_blank" row alignItems="center">
+									<Icons.InstagramFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Instagram
 									</Text>
-								</Box> */}
+								</Box>
 								<Box as="a" href={DISCORD_INVITE} target="_blank" row alignItems="center" mt="ms">
-									<DiscordFill size="20" color={theme.colors['simply-blue']} />
+									<Icons.DiscordFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Join our Discord
 									</Text>
 								</Box>
 								<Box as="a" href={TWITTER_HANDLE} target="_blank" row alignItems="center" mt="ms">
-									<TwitterFill size="20" color={theme.colors['simply-blue']} />
+									<Icons.TwitterFill size="20" color={theme.colors['simply-blue']} />
 									<Text as="b1" color="simply-blue" ml="mxs">
 										Follow us on Twitter
 									</Text>
