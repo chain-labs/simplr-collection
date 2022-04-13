@@ -107,6 +107,7 @@ const Text = ({ as = 'b1', fontWeight, color, children, ...restProps }: TextProp
 
 	return (
 		<Box
+			as={as !== 'b1' && as !== 'b2' && as !== 'b3' && as !== 'c1' && as !== 'c2' && as !== 'c3' ? as : 'div'}
 			className={restProps.className}
 			margin={0}
 			padding={0}
