@@ -71,7 +71,6 @@ export const heroAnimations = () => {
 				trigger: '.info-image',
 				start: 'top 50%',
 				end: '200% 100%',
-				markers: true,
 			},
 		}
 	);
