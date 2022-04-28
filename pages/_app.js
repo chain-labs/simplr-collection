@@ -33,6 +33,24 @@ const MyApp = ({ Component, pageProps }) => {
 						}}
 					/>
 				)}
+				<script type="application/ld+json">{`{
+					"@context": "https://schema.org/",
+					"@type": "Organization",
+					"name": "Simplr",
+					"url": "https://simplrcollection.com/",
+      				"logo": "https://drive.google.com/file/d/1P1yPwdvN28X8XJMM-N4ZWThI9rn3UlYy/view?usp=sharing",
+					"description": "A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without any hassle.",
+					[
+					{
+						"@type": "Cryptography",
+						"name": "Simplr Collection",
+						"description": "A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without any hassle.",
+					},
+					]
+
+}
+
+`}</script>
 			</Head>
 			<ThemeProvider theme={theme}>
 				<Navbar />

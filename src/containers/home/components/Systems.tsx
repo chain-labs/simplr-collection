@@ -41,7 +41,7 @@ const System = () => {
 					mob="h3"
 					tab="h2"
 					desk="h1"
-					text="Creating a system that works for you. Together."
+					text="Creating a system that works for you, together."
 					color="simply-blue"
 					textAlign="center"
 				/>
