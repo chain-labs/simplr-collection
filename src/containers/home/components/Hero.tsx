@@ -65,7 +65,7 @@ const Hero = () => {
 						tab="h2"
 						desk="h1"
 						color="simply-blue"
-						text="What is SImplr Collection solving?"
+						text="What is Simplr Collection Solving?"
 						textAlign="center"
 						className="info-text"
 					/>
@@ -95,7 +95,7 @@ const Hero = () => {
 						</Box>
 						<ResponsiveText
 							mob="h3"
-							text="What is Simplr Collection solving?"
+							text="What is Simplr Collection Solving?"
 							color="simply-blue"
 							textAlign="center"
 							maxWidth={{ mobS: '24rem', tabS: 'unset' }}

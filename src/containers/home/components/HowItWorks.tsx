@@ -12,7 +12,7 @@ const HowItWorks = () => {
 			column
 			alignItems="center"
 		>
-			<ResponsiveText desk="h1" tab="h2" mob="h3" color="simply-blue" text="How Simplr Collection works" />
+			<ResponsiveText desk="h1" tab="h2" mob="h3" color="simply-blue" text="How Simplr Collection Works" />
 			<ResponsiveText
 				desk="b3"
 				tab="b2"
