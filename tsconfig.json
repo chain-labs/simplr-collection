@@ -48,7 +48,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/src/style"
-, "pages/_app.js", "src/components/Navbar.jsx", "src/containers/home/components/Footer.jsx"  ],
+, "pages/_app.js", "src/components/Navbar.jsx", "src/containers/home/components/Footer.jsx", "src/containers/home/components/FadeInWhenVisible.js", "src/containers/home/components/BottomToUp.js"  ],
   "exclude": [
     "node_modules",
     ".next",

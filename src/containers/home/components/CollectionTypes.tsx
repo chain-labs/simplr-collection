@@ -5,6 +5,8 @@ import ButtonComp from 'src/components/Button';
 import ResponsiveText from 'src/components/ResponsiveText';
 import Text from 'src/components/Text';
 import theme from 'src/styleguide/theme';
+import BottomToUp from './BottomToUp';
+import FadeInWhenVisible from './FadeInWhenVisible';
 
 const CollectionTypes = () => {
 	// useEffect(() => {
@@ -65,50 +67,54 @@ const CollectionTypes = () => {
 			mx="auto"
 			pb={{ mobS: 'ms', tabS: 'wl', deskM: 'ws' }}
 		>
-			<ResponsiveText
-				mob="h3"
-				tab="h2"
-				desk="h1"
-				text="Collection Types"
-				color="simply-blue"
-				textAlign="center"
-				id="col-type-headline"
-			/>
-			<Text
-				as="b3"
-				textAlign="center"
-				maxWidth={{ mobS: '27rem', tabS: 'unset' }}
-				mx="auto"
-				mt={{ mobS: 'ms', tabS: 'mm' }}
-				mb={{ mobS: '3.6rem', tabS: 'wm', deskM: 'wxs' }}
-				id="col-type-text"
-			>
-				Choose from various innovative NFT standards and more to come.
-			</Text>
-			<Box
-				display="flex"
-				flexDirection={{ mobS: 'column', tabS: 'row' }}
-				justifyContent="space-between"
-				alignItems="center"
-				mb={{ mobS: 'mxxxl', tabS: 'wxs' }}
-				id="col-type-cards"
-			>
-				<CollectionCard
-					type="1"
-					headline="ERC-721"
-					text="Most widely used and trusted NFT Standard."
-					playground="https://playground.simplrcollection.com"
-					read="https://academy.binance.com/en/glossary/erc-721"
+			<BottomToUp>
+				<ResponsiveText
+					mob="h3"
+					tab="h2"
+					desk="h1"
+					text="Collection Types"
+					color="simply-blue"
+					textAlign="center"
+					id="col-type-headline"
 				/>
-				<Box ml={{ mobS: '0', tabS: 'mxxxl', deskM: 'wxxs' }} mb={{ mobS: 'mxxl', tabS: '0' }} height="100%" />
-				<CollectionCard
-					type="2"
-					headline="ERC-721A"
-					text="Latest and most optimal for large NFT collections."
-					playground="https://erc721a.simplrcollection.com"
-					read="https://www.azuki.com/erc721a"
-				/>
-			</Box>
+				<Text
+					as="b3"
+					textAlign="center"
+					maxWidth={{ mobS: '27rem', tabS: 'unset' }}
+					mx="auto"
+					mt={{ mobS: 'ms', tabS: 'mm' }}
+					mb={{ mobS: '3.6rem', tabS: 'wm', deskM: 'wxs' }}
+					id="col-type-text"
+				>
+					Choose from various innovative NFT standards and more to come.
+				</Text>
+			</BottomToUp>
+			<FadeInWhenVisible>
+				<Box
+					display="flex"
+					flexDirection={{ mobS: 'column', tabS: 'row' }}
+					justifyContent="space-between"
+					alignItems="center"
+					mb={{ mobS: 'mxxxl', tabS: 'wxs' }}
+					id="col-type-cards"
+				>
+					<CollectionCard
+						type="1"
+						headline="ERC-721"
+						text="Most widely used and trusted NFT Standard."
+						playground="https://playground.simplrcollection.com"
+						read="https://academy.binance.com/en/glossary/erc-721"
+					/>
+					<Box ml={{ mobS: '0', tabS: 'mxxxl', deskM: 'wxxs' }} mb={{ mobS: 'mxxl', tabS: '0' }} height="100%" />
+					<CollectionCard
+						type="2"
+						headline="ERC-721A"
+						text="Latest and most optimal for large NFT collections."
+						playground="https://erc721a.simplrcollection.com"
+						read="https://www.azuki.com/erc721a"
+					/>
+				</Box>
+			</FadeInWhenVisible>
 			<Box
 				row
 				justifyContent="center"

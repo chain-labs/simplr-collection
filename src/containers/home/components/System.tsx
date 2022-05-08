@@ -2,7 +2,9 @@ import Box from 'src/components/Box';
 import ResponsiveImage from 'src/components/ResponsiveImage';
 import ResponsiveText from 'src/components/ResponsiveText';
 import Text from 'src/components/Text';
+import BottomToUp from './BottomToUp';
 import { SYSTEM_LIST } from './constants';
+import FadeInWhenVisible from './FadeInWhenVisible';
 
 const SystemCard = ({ title, text, id }) => {
 	return (
@@ -28,21 +30,24 @@ const SystemCard = ({ title, text, id }) => {
 const System = () => {
 	return (
 		<Box pt="wxxs" mx="auto" maxWidth="110rem" column alignItems="center">
-			<Box
-				order={{ mobS: 1, tabS: 1, deskM: 2 }}
-				mt={{ mobS: '0', tabS: '0', deskM: 'wxs' }}
-				mb={{ mobS: 'mxxxl', tabS: 'mxxxl', deskM: '0' }}
-				maxWidth={{ mobS: '38rem', tabS: '43rem', deskM: '100%' }}
-			>
-				<ResponsiveText
-					mob="h3"
-					tab="h2"
-					desk="h2"
-					text="Creating a system that works for you, together."
-					color="simply-blue"
-					textAlign="center"
-				/>
-			</Box>
+			<BottomToUp>
+				<Box
+					order={{ mobS: 1, tabS: 1, deskM: 2 }}
+					mt={{ mobS: '0', tabS: '0', deskM: 'wxs' }}
+					mb={{ mobS: 'mxxxl', tabS: 'mxxxl', deskM: '0' }}
+					maxWidth={{ mobS: '38rem', tabS: '43rem', deskM: '100%' }}
+				>
+					<ResponsiveText
+						mob="h3"
+						tab="h2"
+						desk="h2"
+						text="Creating a system that works for you. Together."
+						color="simply-blue"
+						textAlign="center"
+					/>
+				</Box>
+			</BottomToUp>
+
 			<Box order={{ mobS: 2, tabS: 2, deskM: 1 }}>
 				<ResponsiveImage
 					mobile="/static/images/mobile/ecosystem.png"
@@ -50,20 +55,22 @@ const System = () => {
 					desk="/static/images/desktop/ecosystem.png"
 				/>
 			</Box>
-			<Box
-				mt="wxs"
-				order={3}
-				display="flex"
-				flexDirection={{ mobS: 'column', tabS: 'row' }}
-				flexWrap="wrap"
-				justifyContent={{ mobS: 'flex-start', deskM: 'center' }}
-				alignItems="center"
-				width={{ mobS: '90%', tabS: '71rem', deskM: '105%' }}
-			>
-				{SYSTEM_LIST.map(({ title, text }, index) => (
-					<SystemCard key={index} id={index} title={title} text={text} />
-				))}
-			</Box>
+			<FadeInWhenVisible>
+				<Box
+					mt="wxs"
+					order={3}
+					display="flex"
+					flexDirection={{ mobS: 'column', tabS: 'row' }}
+					flexWrap="wrap"
+					justifyContent={{ mobS: 'flex-start', deskM: 'center' }}
+					alignItems="center"
+					width={{ mobS: '90%', tabS: '71rem', deskM: '105%' }}
+				>
+					{SYSTEM_LIST.map(({ title, text }, index) => (
+						<SystemCard key={index} id={index} title={title} text={text} />
+					))}
+				</Box>
+			</FadeInWhenVisible>
 		</Box>
 	);
 };
