@@ -37,9 +37,9 @@ const System = () => {
 			alignItems="center"
 			pb="wxs"
 		>
-			<BottomToUp>
-				<Box column center>
-					<Box mt={{ mobS: '0', tabS: '0', deskM: 'wxs' }} maxWidth={{ mobS: '38rem', tabS: '43rem', deskM: '100%' }}>
+			<Box column center>
+				<Box mt={{ mobS: '0', tabS: '0', deskM: 'wxs' }} maxWidth={{ mobS: '38rem', tabS: '43rem', deskM: '100%' }}>
+					<BottomToUp duration={0}>
 						<ResponsiveText
 							maxWidth={{ mobS: '28rem', tabS: '100rem', deskM: '66rem' }}
 							mob="h3"
@@ -49,14 +49,16 @@ const System = () => {
 							color="simply-blue"
 							textAlign="center"
 						/>
-					</Box>
+					</BottomToUp>
+				</Box>
+				<BottomToUp duration={0.3}>
 					<Text as="b3" maxWidth={{ mobS: '28rem', tabS: '70rem' }} textAlign="center" mt="mm">
 						When you launch your collection using Simplr Collection, you join the Simplr Ecosystem where your project
 						will have the opportunity to interact with other projects and their unique communities while also gaining
 						exposure.
 					</Text>
-				</Box>
-			</BottomToUp>
+				</BottomToUp>
+			</Box>
 			<FadeInWhenVisible>
 				<Box
 					mt={{ mobS: 'mxxxl', tabS: '7rem' }}

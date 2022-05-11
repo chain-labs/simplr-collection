@@ -67,7 +67,7 @@ const CollectionTypes = () => {
 			mx="auto"
 			pb={{ mobS: 'ms', tabS: 'wl', deskM: 'ws' }}
 		>
-			<BottomToUp>
+			<BottomToUp delay={0}>
 				<ResponsiveText
 					mob="h3"
 					tab="h2"
@@ -77,6 +77,8 @@ const CollectionTypes = () => {
 					textAlign="center"
 					id="col-type-headline"
 				/>
+			</BottomToUp>
+			<BottomToUp delay={0.3}>
 				<Text
 					as="b3"
 					textAlign="center"

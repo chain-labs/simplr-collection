@@ -30,7 +30,7 @@ const SystemCard = ({ title, text, id }) => {
 const System = () => {
 	return (
 		<Box pt="wxxs" mx="auto" maxWidth="110rem" column alignItems="center">
-			<BottomToUp>
+			<BottomToUp delay={0}>
 				<Box
 					order={{ mobS: 1, tabS: 1, deskM: 2 }}
 					mt={{ mobS: '0', tabS: '0', deskM: 'wxs' }}

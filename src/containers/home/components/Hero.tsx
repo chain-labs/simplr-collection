@@ -36,8 +36,8 @@ const Hero = () => {
 				pt={{ mobS: 'wxl', tabS: '17rem', deskM: '19rem' }}
 			>
 				<Box column center>
-					<BottomToUp>
-						<Box column center>
+					<Box column center>
+						<BottomToUp delay={0}>
 							<ResponsiveText
 								mob="h2"
 								tab="h1"
@@ -50,19 +50,21 @@ const Hero = () => {
 								lineHeight="120%"
 								mb="2%"
 							/>
+						</BottomToUp>
+						<BottomToUp delay={0.2}>
 							<Text as="b2" maxWidth={{ mobS: '25rem', tabS: '53rem' }} textAlign="center" id="hero-subtext">
 								A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects
 								without any hassle.
 							</Text>
-						</Box>
-					</BottomToUp>
+						</BottomToUp>
+					</Box>
 					<Box
 						column
 						flexDirection={{ mobS: 'column-reverse', tabS: 'column' }}
 						alignItems="center"
 						mt={{ mobS: 'ml' }}
 					>
-						<BottomToUp>
+						<BottomToUp delay={0.4}>
 							<ButtonComp
 								bg="primary"
 								px="wxs"
@@ -84,7 +86,7 @@ const Hero = () => {
 					</Box>
 				</Box>
 				<Box column center mt={{ mobS: 'wm', tabS: 'wxs', deskM: 'wxl' }}>
-					<BottomToUp>
+					<BottomToUp delay={0.3}>
 						<ResponsiveText
 							tab="h2"
 							desk="h1"

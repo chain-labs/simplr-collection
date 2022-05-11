@@ -130,8 +130,8 @@ const Features = () => {
 			column
 			center
 		>
-			<BottomToUp>
-				<Box column center>
+			<Box column center>
+				<BottomToUp delay={0}>
 					<Text className="feat-title" as="h2" color="simply-blue" display={{ mobS: 'none', deskM: 'block' }}>
 						Game Changing Features
 					</Text>
@@ -145,6 +145,8 @@ const Features = () => {
 					>
 						Our Game Changing Features
 					</Text>
+				</BottomToUp>
+				<BottomToUp delay={0.3}>
 					<Text
 						className="feat-info"
 						as="b3"
@@ -165,8 +167,8 @@ const Features = () => {
 					>
 						For your smart contract, you can select from a variety of modules. It’s as easy as plugging and playing.
 					</Text>
-				</Box>
-			</BottomToUp>
+				</BottomToUp>
+			</Box>
 
 			<Box
 				mt={{ mobS: 'mxxxl', tabS: '7.4rem', deskM: 'wm' }}

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 import { useInView } from 'react-intersection-observer';
 
-function BottomToUp({ children }) {
+function BottomToUp({ children, delay }) {
 	const controls = useAnimation();
 	const [ref, inView] = useInView();
 	const variants = {
@@ -27,7 +27,7 @@ function BottomToUp({ children }) {
 			initial="hidden" // Set the initial state to variants.hidden
 			animate={controls} // Animated state to variants.enter
 			exit="exit" // Exit state (used later) to variants.exit
-			transition={{ type: 'linear' }}
+			transition={{ type: 'linear', delay: `${delay}`, duration: 0.8 }}
 		>
 			{children}
 		</motion.div>
