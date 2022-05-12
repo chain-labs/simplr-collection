@@ -12,7 +12,10 @@ const MyApp = ({ Component, pageProps }) => {
 		<>
 			<Head>
 				<title>Simplr Collection</title>
-				<meta name="keywords" content="Blockchain,NFT,Cryptocurrency,Simplr,SimplrCollection,Chainlabs" />
+				<meta
+					name="keywords"
+					content="nft, NFT, nft marketplace, what is nft, simple, nft launch, simple, launch nft, how to launch an nft, nft launchpad, nft metadata, nft smart contract, mint pass, simple nft art,nft kit, simplr, simplr collection, nft simplified "
+				/>
 				<meta
 					name="description"
 					content="A simple, easy to use, no-code platform to create NFT smart contracts and launch your NFT projects without any hassle."
