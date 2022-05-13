@@ -5,25 +5,27 @@ import BottomToUp from './BottomToUp';
 import { SYSTEM_LIST } from './constants';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
-const SystemCard = ({ title, text, id }) => {
+const SystemCard = ({ title, text, id, className }) => {
 	return (
-		<Box
-			py="mm"
-			px="mxl"
-			border="1px solid #aac6fc"
-			borderRadius="12px"
-			width={{ mobS: '26rem', tabS: '34rem' }}
-			minHeight="11rem"
-			fontWeight={{ mobS: 'bold', tabS: 'semi-bold' }}
-			mb={{ mobS: 'mm', tabS: 'mxl', deskM: 'mxxxl' }}
-			mr={id === 0 || id === 1 || id === 3 ? { mobS: '0', deskM: 'wxs' } : '0'}
-			ml={id % 2 === 1 ? { mobS: '0', tabS: 'mxl', deskM: '0' } : '0'}
-		>
-			<Text as="h4" color="simply-blue">
-				{title}
-			</Text>
-			<ResponsiveText mob="b2" tab="b1" desk="b1" text={text} mt="mxs" />
-		</Box>
+		<FadeInWhenVisible delay={className / 10 + 0.5}>
+			<Box
+				py="mm"
+				px="mxl"
+				border="1px solid #aac6fc"
+				borderRadius="12px"
+				width={{ mobS: '26rem', tabS: '34rem' }}
+				minHeight="11rem"
+				fontWeight={{ mobS: 'bold', tabS: 'semi-bold' }}
+				mb={{ mobS: 'mm', tabS: 'mxl', deskM: 'mxxxl' }}
+				mr={id === 0 || id === 1 || id === 3 ? { mobS: '0', deskM: 'wxs' } : '0'}
+				ml={id % 2 === 1 ? { mobS: '0', tabS: 'mxl', deskM: '0' } : '0'}
+			>
+				<Text as="h4" color="simply-blue">
+					{title}
+				</Text>
+				<ResponsiveText mob="b2" tab="b1" desk="b1" text={text} mt="mxs" />
+			</Box>
+		</FadeInWhenVisible>
 	);
 };
 
@@ -59,22 +61,20 @@ const System = () => {
 					</Text>
 				</BottomToUp>
 			</Box>
-			<FadeInWhenVisible>
-				<Box
-					mt={{ mobS: 'mxxxl', tabS: '7rem' }}
-					order={3}
-					display="flex"
-					flexDirection={{ mobS: 'column', tabS: 'row' }}
-					flexWrap="wrap"
-					justifyContent={{ mobS: 'flex-start', tabS: 'center' }}
-					alignItems="center"
-					width={{ mobS: '90%', tabS: '71rem', deskM: '105%' }}
-				>
-					{SYSTEM_LIST.map(({ title, text }, index) => (
-						<SystemCard key={index} id={index} title={title} text={text} />
-					))}
-				</Box>
-			</FadeInWhenVisible>
+			<Box
+				mt={{ mobS: 'mxxxl', tabS: '7rem' }}
+				order={3}
+				display="flex"
+				flexDirection={{ mobS: 'column', tabS: 'row' }}
+				flexWrap="wrap"
+				justifyContent={{ mobS: 'flex-start', tabS: 'center' }}
+				alignItems="center"
+				width={{ mobS: '90%', tabS: '71rem', deskM: '105%' }}
+			>
+				{SYSTEM_LIST.map(({ title, text }, index) => (
+					<SystemCard key={index} id={index} title={title} text={text} className={index} />
+				))}
+			</Box>
 		</Box>
 	);
 };

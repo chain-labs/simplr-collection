@@ -41,39 +41,41 @@ const FeatureCard = ({ image, title, info, className }) => {
 	// 	}
 	// }, []);
 	return (
-		<Box
-			className={className}
-			display="flex"
-			flexDirection={{ mobS: 'column', tabS: 'row' }}
-			alignItems="center"
-			p="ml"
-			border="1px solid"
-			borderColor="gray-10"
-			borderRadius="8px"
-			maxWidth={{ mobS: '80vw', tabS: '54rem' }}
-			width={{ mobS: '32rem', tabS: 'unset' }}
-			mb="ml"
-		>
-			{/* <ResponsiveImage
+		<FadeInWhenVisible delay={className / 10 + 0.5}>
+			<Box
+				className={className}
+				display="flex"
+				flexDirection={{ mobS: 'column', tabS: 'row' }}
+				alignItems="center"
+				p="ml"
+				border="1px solid"
+				borderColor="gray-10"
+				borderRadius="8px"
+				maxWidth={{ mobS: '80vw', tabS: '54rem' }}
+				width={{ mobS: '32rem', tabS: 'unset' }}
+				mb="ml"
+			>
+				{/* <ResponsiveImage
 				mobile={`/static/images/mobile/${image}`}
 				tab={`/static/images/tab/${image}`}
 				desk={`/static/images/desktop/${image}`}
 			/> */}
-			<Box minWidth="10.2rem">
-				<Image src={image} objectFit="cover" alt="feature-image" />
+				<Box minWidth="10.2rem">
+					<Image src={image} objectFit="cover" alt="feature-image" />
+				</Box>
+				<Box ml={{ mobS: '0', tabS: 'mxxl' }}>
+					<Text as="h3" color="simply-blue" display={{ mobS: 'none', tabS: 'block' }}>
+						{title}
+					</Text>
+					<Text as="h3" color="simply-blue" display={{ mobS: 'block', tabS: 'none' }} textAlign="center">
+						{title}
+					</Text>
+					<Text as="b2" mt="ms" textAlign={{ mobS: 'center', tabS: 'left' }}>
+						{info}
+					</Text>
+				</Box>
 			</Box>
-			<Box ml={{ mobS: '0', tabS: 'mxxl' }}>
-				<Text as="h3" color="simply-blue" display={{ mobS: 'none', tabS: 'block' }}>
-					{title}
-				</Text>
-				<Text as="h3" color="simply-blue" display={{ mobS: 'block', tabS: 'none' }} textAlign="center">
-					{title}
-				</Text>
-				<Text as="b2" mt="ms" textAlign={{ mobS: 'center', tabS: 'left' }}>
-					{info}
-				</Text>
-			</Box>
-		</Box>
+		</FadeInWhenVisible>
 	);
 };
 
@@ -180,9 +182,9 @@ const Features = () => {
 				alignItems="center"
 			>
 				{FEATURES.map(({ image, title, info }, idx) => (
-					<FadeInWhenVisible>
-						<FeatureCard key={`${idx}-feature`} className={`feat-card-${idx}`} {...{ image, title, info }} />
-					</FadeInWhenVisible>
+					// <FadeInWhenVisible delay={0.5}>
+					<FeatureCard key={`${idx}-feature`} className={`${idx}`} {...{ image, title, info }} />
+					// </FadeInWhenVisible>
 				))}
 			</Box>
 		</Box>

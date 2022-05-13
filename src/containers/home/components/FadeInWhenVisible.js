@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 import { useInView } from 'react-intersection-observer';
 
-function FadeInWhenVisible({ children }) {
+function FadeInWhenVisible({ children, delay }) {
 	const controls = useAnimation();
 	const [ref, inView] = useInView();
 
@@ -20,7 +20,7 @@ function FadeInWhenVisible({ children }) {
 			ref={ref}
 			animate={controls}
 			initial="hidden"
-			transition={{ duration: 2.5, delay: 0.3 }}
+			transition={{ duration: 1, delay: `${delay}` }}
 			variants={{
 				visible: { opacity: 1 },
 				hidden: { opacity: 0 },

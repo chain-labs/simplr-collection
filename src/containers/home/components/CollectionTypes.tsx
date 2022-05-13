@@ -91,32 +91,38 @@ const CollectionTypes = () => {
 					Choose from various innovative NFT standards and more to come.
 				</Text>
 			</BottomToUp>
-			<FadeInWhenVisible>
-				<Box
-					display="flex"
-					flexDirection={{ mobS: 'column', tabS: 'row' }}
-					justifyContent="space-between"
-					alignItems="center"
-					mb={{ mobS: 'mxxxl', tabS: 'wxs' }}
-					id="col-type-cards"
-				>
-					<CollectionCard
-						type="1"
-						headline="ERC-721"
-						text="Most widely used and trusted NFT Standard."
-						playground="https://playground.simplrcollection.com"
-						read="https://academy.binance.com/en/glossary/erc-721"
-					/>
-					<Box ml={{ mobS: '0', tabS: 'mxxxl', deskM: 'wxxs' }} mb={{ mobS: 'mxxl', tabS: '0' }} height="100%" />
-					<CollectionCard
-						type="2"
-						headline="ERC-721A"
-						text="Latest and most optimal for large NFT collections."
-						playground="https://erc721a.simplrcollection.com"
-						read="https://www.azuki.com/erc721a"
-					/>
-				</Box>
-			</FadeInWhenVisible>
+			<Box
+				display="flex"
+				flexDirection={{ mobS: 'column', tabS: 'row' }}
+				justifyContent="space-between"
+				alignItems="center"
+				mb={{ mobS: 'mxxxl', tabS: 'wxs' }}
+				id="col-type-cards"
+			>
+				<FadeInWhenVisible delay={0.8}>
+					<Box justifyContent="space-between" alignItems="center" display="flex">
+						<CollectionCard
+							type="1"
+							headline="ERC-721"
+							text="Most widely used and trusted NFT Standard."
+							playground="https://playground.simplrcollection.com"
+							read="https://academy.binance.com/en/glossary/erc-721"
+						/>
+					</Box>
+				</FadeInWhenVisible>
+				<Box ml={{ mobS: '0', tabS: 'mxxxl', deskM: 'wxxs' }} mb={{ mobS: 'mxxl', tabS: '0' }} height="100%" />
+				<FadeInWhenVisible delay={1}>
+					<Box justifyContent="space-between" alignItems="center" display="flex">
+						<CollectionCard
+							type="2"
+							headline="ERC-721A"
+							text="Latest and most optimal for large NFT collections."
+							playground="https://erc721a.simplrcollection.com"
+							read="https://www.azuki.com/erc721a"
+						/>
+					</Box>
+				</FadeInWhenVisible>
+			</Box>
 			<Box
 				row
 				justifyContent="center"
