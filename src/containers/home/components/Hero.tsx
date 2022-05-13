@@ -78,7 +78,7 @@ const Hero = () => {
 								</Box>
 							</ButtonComp>
 						</BottomToUp>
-						<FadeInWhenVisible>
+						<FadeInWhenVisible delay={0.5}>
 							<Box center width={{ mobS: '100vw', tabS: '84rem', deskM: '117rem' }} position="relative">
 								<Image src={heroImage} objectFit="cover" className="hero-image" alt="hero-image" />
 							</Box>
@@ -96,7 +96,7 @@ const Hero = () => {
 							className="info-text"
 						/>
 					</BottomToUp>
-					<FadeInWhenVisible>
+					<FadeInWhenVisible delay={0.5}>
 						<Box
 							display="flex"
 							flexDirection={{ mobS: 'column-reverse', tabS: 'row' }}
