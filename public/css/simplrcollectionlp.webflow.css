@@ -222,7 +222,7 @@ a {
 
 .button {
   display: block;
-  width: 353.3625183105469px;
+  width: 300px;
   margin-top: 24px;
   margin-right: auto;
   margin-left: auto;
@@ -361,6 +361,7 @@ a {
 
 .nav-link:hover {
   color: #4743c5;
+  font-weight: 500;
 }
 
 .nav-link:active {
@@ -368,24 +369,30 @@ a {
 }
 
 .nav-link.cta {
+  margin-left: 10px;
   padding-right: 24px;
   padding-left: 24px;
   border-radius: 64px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6e049), to(#f6e049));
-  background-image: linear-gradient(180deg, #f6e049, #f6e049);
-  color: #010211;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e0eaff), to(#e0eaff));
+  background-image: linear-gradient(180deg, #e0eaff, #e0eaff);
+  box-shadow: 3px 4px 0 0 #4743c5;
+  outline-color: #3733b3;
+  outline-offset: 0px;
+  outline-style: none;
+  outline-width: 2px;
+  color: #4743c5;
 }
 
 .nav-link.cta:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f98e11), to(#f98e11));
-  background-image: linear-gradient(180deg, #f98e11, #f98e11);
-  color: #010211;
+  background-color: #d5e2fd;
+  background-image: none;
+  color: #4743c5;
 }
 
 .nav-link.cta:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#df7f0f), to(#df7f0f));
-  background-image: linear-gradient(180deg, #df7f0f, #df7f0f);
-  color: #010211;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bacef8), to(#bacef8));
+  background-image: linear-gradient(180deg, #bacef8, #bacef8);
+  color: #4743c5;
 }
 
 .nav-link.dropdown-mobile {
@@ -514,7 +521,7 @@ a {
 }
 
 .p2.features {
-  width: 480px;
+  width: 520px;
   margin-right: auto;
   margin-left: 0px;
 }
@@ -696,7 +703,7 @@ a {
 }
 
 .callout-section {
-  margin-top: 120px;
+  margin-top: 60px;
   background-image: url('../images/Discord-bg.svg');
   background-position: 50% 100%;
   background-size: cover;
@@ -980,10 +987,18 @@ a {
   white-space: normal;
 }
 
+.footer-text:hover {
+  color: #3f4255;
+}
+
 .footer-text.product {
   width: auto;
   padding-right: 8px;
   font-weight: 400;
+}
+
+.footer-text.product:hover {
+  color: #696e8b;
 }
 
 .footer-text.bottom {
@@ -1208,7 +1223,7 @@ a {
 }
 
 .dropdown-2 {
-  padding-right: 10px;
+  padding-right: 0px;
 }
 
 .dropdown-2:hover {
@@ -1282,6 +1297,22 @@ a {
   -webkit-transform: translate(5px, 5px);
   -ms-transform: translate(5px, 5px);
   transform: translate(5px, 5px);
+}
+
+.nav-cta-wrapper {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0, .755, .158, 1.001);
+  transition: -webkit-transform 200ms cubic-bezier(0, .755, .158, 1.001);
+  transition: transform 200ms cubic-bezier(0, .755, .158, 1.001);
+  transition: transform 200ms cubic-bezier(0, .755, .158, 1.001), -webkit-transform 200ms cubic-bezier(0, .755, .158, 1.001);
+}
+
+.nav-cta-wrapper:active {
+  -webkit-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
 @media screen and (min-width: 1440px) {
@@ -1543,16 +1574,18 @@ a {
     margin-left: 10px;
   }
 
+  .nav-link:hover {
+    font-weight: 500;
+  }
+
   .nav-link.cta {
     margin-right: 0px;
-    -webkit-transition: all 200ms ease;
-    transition: all 200ms ease;
-    color: #010211;
+    color: #4743c5;
     cursor: pointer;
   }
 
   .nav-link.cta:hover {
-    color: #010211;
+    color: #4743c5;
   }
 
   .nav-link.dropdown-mobile:hover {
@@ -1812,7 +1845,7 @@ a {
   }
 
   .callout-section {
-    margin-top: 160px;
+    margin-top: 100px;
     background-position: 50% 100%;
   }
 
@@ -2088,7 +2121,7 @@ a {
   }
 
   .callout-section {
-    margin-top: 160px;
+    margin-top: 120px;
     background-position: 50% 100%;
   }
 
@@ -2161,7 +2194,7 @@ a {
   }
 
   .container.call-out {
-    margin-top: 200px;
+    margin-top: 100px;
     padding-top: 140px;
     padding-bottom: 140px;
   }
@@ -2176,7 +2209,7 @@ a {
 
   .h1 {
     display: block;
-    width: 650px;
+    width: 580px;
     min-height: 97px;
     min-width: 756px;
     font-size: 40px;
@@ -2906,13 +2939,13 @@ a {
 
   .h1 {
     width: 100%;
-    max-width: 380px;
+    max-width: 315px;
     min-height: 112px;
     min-width: 315px;
     margin-top: 120px;
     margin-right: auto;
     margin-left: auto;
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .hero {
@@ -2934,9 +2967,13 @@ a {
     line-height: 150%;
   }
 
+  .button {
+    width: 230px;
+  }
+
   .button.button-small {
     width: auto;
-    max-width: 256px;
+    max-width: 230px;
     min-width: 220px;
     margin-left: 0px;
     padding: 11.5px 24px;
@@ -2953,7 +2990,7 @@ a {
   }
 
   .button.call-out {
-    width: 270px;
+    width: 230px;
     font-size: 14px;
     line-height: 120%;
   }
@@ -2990,7 +3027,6 @@ a {
   }
 
   .nav-logo {
-    max-width: 90%;
     margin-top: 0px;
     padding: 0px;
   }
