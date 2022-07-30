@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Sat Jul 30 2022 04:12:42 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Jul 30 2022 05:01:44 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="62d92c89e86273dc58e7772e" data-wf-site="62d92c89e86273506ce7772c">
  <head>
   <meta charset="utf-8"/>
@@ -39,27 +39,6 @@
   <script>
    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
   </script>
-  <script>
-   const plausibleNavCta = document.getElementById('nav-cta');
-plausibleNavCta.addEventListener('click', function(e) {
-    e.preventDefault();
-    plausible('Open App from Nav');
-  })
-  </script>
-  <script>
-   const plausibleHeroDiscovery = document.getElementById('hero-discoverycall');
-plausibleHeroDiscovery.addEventListener('click', function(e) {
-    e.preventDefault();
-    plausible('Click on Hero Schedule Call CTA');
-  })
-  </script>
-  <script>
-   const plausibleJoinDiscord = document.getElementById('join-discord');
-plausibleJoinDiscord.addEventListener('click', function(e) {
-    e.preventDefault();
-    plausible('Joined Discord');
-  })
-  </script>
   <meta content="Simplr Collection" property="og:title"/>
   <mneta content="A simple, easy-to-use, no-code platform for creating NFT smart contracts and launching your NFT collection without the hassle." property="og:description">
   </mneta>
@@ -95,10 +74,10 @@ plausibleJoinDiscord.addEventListener('click', function(e) {
       <nav class="nav-menu w-nav-menu" role="navigation">
        <div class="nav-container">
         <div class="mobile-nav-links">
-         <a class="nav-link w-nav-link" data-w-id="a7ec9e82-e48a-a08a-4abb-624c3c1e54ec" href="https://stonly.com/guide/en/simplr-collection-faqs-56DsboQUsp/Steps/" style="opacity:0" target="_blank">
+         <a class="nav-link w-nav-link" data-w-id="a7ec9e82-e48a-a08a-4abb-624c3c1e54ec" href="https://stonly.com/guide/en/simplr-collection-faqs-56DsboQUsp/Steps/" id="nav-faq" style="opacity:0" target="_blank">
           FAQs
          </a>
-         <a class="nav-link w-nav-link" data-w-id="a7ec9e82-e48a-a08a-4abb-624c3c1e54ee" href="https://discord.com/invite/fRZNADp43W" style="opacity:0" target="_blank">
+         <a class="nav-link w-nav-link" data-w-id="a7ec9e82-e48a-a08a-4abb-624c3c1e54ee" href="https://discord.com/invite/fRZNADp43W" id="nav-discord" style="opacity:0" target="_blank">
           Discord
          </a>
          <div class="dropdown-2 w-dropdown" data-delay="0" data-hover="false" data-w-id="0210d391-9b8b-e5d8-f8e1-efdca355d922">
@@ -110,12 +89,12 @@ plausibleJoinDiscord.addEventListener('click', function(e) {
            </div>
           </div>
           <nav class="dropdown-list w-dropdown-list">
-           <a class="dropdown-link w-dropdown-link" href="https://www.youtube.com/watch?v=Nl7qMKwX_Iw" target="_blank">
+           <a class="dropdown-link w-dropdown-link" href="https://www.youtube.com/watch?v=Nl7qMKwX_Iw" id="how-to-create" target="_blank">
             Create Collection
            </a>
            <div class="line">
            </div>
-           <a class="dropdown-link-2 w-dropdown-link" href="https://www.youtube.com/watch?v=PxKvGDzApso" target="_blank">
+           <a class="dropdown-link-2 w-dropdown-link" href="https://www.youtube.com/watch?v=PxKvGDzApso" id="how-to-manage" target="_blank">
             Manage Collection
            </a>
           </nav>
@@ -913,5 +892,45 @@ plausibleJoinDiscord.addEventListener('click', function(e) {
   <script src="js/webflow.js" type="text/javascript">
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+   const plausibleNavCta = document.getElementById('nav-cta');
+plausibleNavCta.addEventListener('click', function(e) {
+    plausible('Open App from Nav');
+  })
+  </script>
+  <script>
+   const plausibleHeroDiscovery = document.getElementById('hero-discoverycall');
+plausibleHeroDiscovery.addEventListener('click', function(e) {
+    plausible('Schedule Call CTA', {props: {source: "Hero Section"}});
+  })
+  </script>
+  <script>
+   const plausibleJoinDiscord = document.getElementById('join-discord');
+plausibleJoinDiscord.addEventListener('click', function(e) {
+    plausible('Joined Discord', {props: {source: 'Callout Section'}});
+  })
+  </script>
+  <script>
+   const plausibleJoinDiscordNav = document.getElementById('nav-discord');
+plausibleJoinDiscordNav.addEventListener('click', function(e) {
+    plausible('Joined Discord', {props: {source: 'Navbar'}});
+  })
+const plausibleHowToCreate = document.getElementById('how-to-create');
+plausibleHowToCreate.addEventListener('click', function(e) {
+    plausible('Click on How to Create Collection');
+  })
+const plausibleHowToManage = document.getElementById('how-to-manage');
+plausibleHowToManage.addEventListener('click', function(e) {
+    plausible('Click on How to Manage Collection');
+  })
+const plausibleNavFaq = document.getElementById('nav-faq');
+plausibleNavFaq.addEventListener('click', function(e) {
+    plausible('Click on FAQ');
+  })
+const plausibleStepsDiscovery = document.getElementById('Steps-Discovery');
+plausibleStepsDiscovery.addEventListener('click', function(e) {
+  	plausible('Schedule Call CTA', {props: {source: "How we Move Section" }});
+})
+  </script>
  </body>
 </html>
