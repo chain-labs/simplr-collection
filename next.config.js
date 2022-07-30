@@ -35,6 +35,10 @@ module.exports = withPlugins([
 						source: '/api/:path*',
 						destination: 'https://simplr.mypinata.cloud/ipfs/:path*',
 					},
+					{
+						source: '/',
+						destination: '/landing.html',
+					},
 				];
 			},
 			generateETags: false,
