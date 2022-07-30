@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Sat Jul 30 2022 02:51:01 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Jul 30 2022 04:12:42 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="62d92c89e86273dc58e7772e" data-wf-site="62d92c89e86273506ce7772c">
  <head>
   <meta charset="utf-8"/>
@@ -36,9 +36,33 @@
   </script>
   <script data-domain="simplrcollectionlp.webflow.io" defer="" src="https://plausible.io/js/plausible.js">
   </script>
+  <script>
+   window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+  </script>
+  <script>
+   const plausibleNavCta = document.getElementById('nav-cta');
+plausibleNavCta.addEventListener('click', function(e) {
+    e.preventDefault();
+    plausible('Open App from Nav');
+  })
+  </script>
+  <script>
+   const plausibleHeroDiscovery = document.getElementById('hero-discoverycall');
+plausibleHeroDiscovery.addEventListener('click', function(e) {
+    e.preventDefault();
+    plausible('Click on Hero Schedule Call CTA');
+  })
+  </script>
+  <script>
+   const plausibleJoinDiscord = document.getElementById('join-discord');
+plausibleJoinDiscord.addEventListener('click', function(e) {
+    e.preventDefault();
+    plausible('Joined Discord');
+  })
+  </script>
   <meta content="Simplr Collection" property="og:title"/>
-  <meta content="A simple, easy-to-use, no-code platform for creating NFT smart contracts and launching your NFT collection without the hassle." property="og:description">
-  </meta>
+  <mneta content="A simple, easy-to-use, no-code platform for creating NFT smart contracts and launching your NFT collection without the hassle." property="og:description">
+  </mneta>
   <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
   <meta content="BX0Vo3GESWeUxAbuYWlXYLiEksTkOtIuT_DDs_8Y6m4" name="google-site-verification"/>
   <script type="application/ld+json">
