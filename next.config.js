@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const withTM = require('next-transpile-modules')(['gsap']);
+const withTM = require('next-transpile-modules')([]);
 const withPlugins = require('next-compose-plugins');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -34,6 +34,10 @@ module.exports = withPlugins([
 					{
 						source: '/api/:path*',
 						destination: 'https://simplr.mypinata.cloud/ipfs/:path*',
+					},
+					{
+						source: '/',
+						destination: '/landing.html',
 					},
 				];
 			},
